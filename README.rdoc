@@ -1,0 +1,81 @@
+{<img alt='Stories in Ready' src='https://badge.waffle.io/fabraz/assetcheef.png?label=ready&title=Ready' />}[https://google.com]
+== README - EqLibra Plus
+
+EqLibra Plus is an investment portifolio management web app
+
+In your wallet you can manage:
+
+- *Stocks*:
+       - Keep track of your stocks and build a solid investment.
+- *Exchange*:
+       - Bennefit with the variation of coins market.
+- *Investment* *Fund*:
+       - Investors, together, make more money.
+- *Treasury* *Direct*:
+       - Sale of government bonds to individuals through the internet..
+
+
+Deployed link: Defining
+
+== Contributing 
+
+Fork me! And make your *Pull* *Request* for the branch  <tt>master</tt>.
+
+https://github.com/fabraz/assetcheef#fork-destination-box
+
+== Development
+
+- System dependencies (Ubuntu 14.04 package names)
+  - build-essential
+  - curl
+- Ruby version
+  - 2.2.2
+You can easily install it through the Ruby Version Manager - RVM. Instructions on how to do it can be found at http://rvm.io
+
+* Configuration
+
+    bundle install
+
+* Database creation
+
+    rake db:create
+
+* Database initialization
+
+    rake db:setup
+
+* How to run the test suite
+
+    rake
+
+== Deploy Instructions
+
+Contact: augusto.modesto@live.com
+
+Deployed link: Defining
+
+== Authors
+
+- Advisor:
+
+  - Fabricio Braz (https://github.com/fabraz)
+
+- Developer:
+
+  - Augusto Modesto (https://github.com/modestoo)
+
+  - Cristóvão L. Frinhani (https://github.com/ristovao)
+
+  - Fillipe Oliveira Feitosa (https://github.com/fillipefeitosa)
+
+  - Matheus Ferraz (https://github.com/matheusferraz)
+
+  - Vanessa Soares (https://github.com/vannessasoares) 
+
+
+== Acknowledgments
+
+The authors have been supported by organizations:
+
+Universidade de Brasília - Faculdade Gama (Unb - FGA)
+
