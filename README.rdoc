@@ -1,4 +1,4 @@
-{<img alt='Stories in Ready' src='https://badge.waffle.io/fabraz/assetcheef.png?label=ready&title=Ready' />}[https://google.com]
+{<img alt='Stories in Ready' src='https://badge.waffle.io/fabraz/assetcheef.png?label=ready&title=Ready' />}[https://waffle.io/Modesteam/EqLibra]
 == README - EqLibra Plus
 
 EqLibra Plus is an investment portifolio management web app
@@ -14,14 +14,13 @@ In your wallet you can manage:
 - *Treasury* *Direct*:
        - Sale of government bonds to individuals through the internet..
 
-
 Deployed link: Defining
 
 == Contributing 
 
 Fork me! And make your *Pull* *Request* for the branch  <tt>master</tt>.
 
-https://github.com/fabraz/assetcheef#fork-destination-box
+https://github.com/Modesteam/EqLibra#fork-destination-box
 
 == Development
 
@@ -75,7 +74,12 @@ Deployed link: Defining
 
 == Acknowledgments
 
-The authors have been supported by organizations:
+- Original Project:
 
-Universidade de Brasília - Faculdade Gama (Unb - FGA)
+  - https://github.com/fillipefeitosa/assetcheef
+
+
+- The authors have been supported by organizations:
+
+  - Universidade de Brasília - Faculdade Gama (Unb - FGA)
 
