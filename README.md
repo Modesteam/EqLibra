@@ -1,1 +1,1 @@
-# EqLibra-
+# EqLibra
