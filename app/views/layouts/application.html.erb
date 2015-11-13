@@ -1,29 +1,42 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>EqLibra</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+		<title><%= content_for?(:title) ? yield(:title) : "EqLibra" %></title>
 
-<div class="container">
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>">
-      <%= value %>
-    </div>
-  <% end %>
-</div>
+		<%= stylesheet_link_tag    "application" %>
+		<%= javascript_include_tag "vendor/modernizr" %>
+		<%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
 
-<%= yield :top_content %>
+	<body>
+		
+		
+		
+		
+		<% if user_signed_in? %>
+			<%= yield :top_navBar %>
+		<% end %>
 
-<div class="container">
-    <h1><%= yield :header %></h1>
-  <%= yield %>
-</div>
+		<div class="container">
+			<% flash.each do |key, value| %>
+			<div class="alert alert-<%= key %>">
+				<%= value %>
+			</div>
+			<% end %>
+		</div>
 
-</body>
+		<%= yield :top_content %>
+
+		<div class="container">
+			<h1><%= yield :header %></h1>
+			<%= yield %>
+		</div>
+
+	</body>
+
 </html>
+

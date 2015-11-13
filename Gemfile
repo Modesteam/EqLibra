@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Devise Gem
 gem 'devise'
+# Foundation Gem
+gem 'foundation-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
