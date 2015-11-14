@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151113035439) do
+ActiveRecord::Schema.define(version: 20151114200114) do
+
+  create_table "exchanges", force: :cascade do |t|
+    t.string   "name"
+    t.float    "initial_income"
+    t.float    "current_income"
+    t.float    "efficiency"
+    t.float    "initial_dollar_quotation"
+    t.float    "initial_euro_quotation"
+    t.float    "discount"
+    t.datetime "buy_date"
+    t.string   "exchange_type"
+    t.float    "dollar_quotation"
+    t.float    "euro_quotation"
+    t.string   "variation_dollar"
+    t.string   "variation_euro"
+    t.integer  "wallet_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "exchanges", ["wallet_id"], name: "index_exchanges_on_wallet_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

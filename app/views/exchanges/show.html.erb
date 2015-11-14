@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @exchange.name %>
+</p>
+
+<p>
+  <strong>Initial income:</strong>
+  <%= @exchange.initial_income %>
+</p>
+
+<p>
+  <strong>Current income:</strong>
+  <%= @exchange.current_income %>
+</p>
+
+<p>
+  <strong>Efficiency:</strong>
+  <%= @exchange.efficiency %>
+</p>
+
+<p>
+  <strong>Initial dollar quotation:</strong>
+  <%= @exchange.initial_dollar_quotation %>
+</p>
+
+<p>
+  <strong>Initial euro quotation:</strong>
+  <%= @exchange.initial_euro_quotation %>
+</p>
+
+<p>
+  <strong>Discount:</strong>
+  <%= @exchange.discount %>
+</p>
+
+<p>
+  <strong>Buy date:</strong>
+  <%= @exchange.buy_date %>
+</p>
+
+<p>
+  <strong>Exchange type:</strong>
+  <%= @exchange.exchange_type %>
+</p>
+
+<p>
+  <strong>Dollar quotation:</strong>
+  <%= @exchange.dollar_quotation %>
+</p>
+
+<p>
+  <strong>Euro quotation:</strong>
+  <%= @exchange.euro_quotation %>
+</p>
+
+<p>
+  <strong>Variation dollar:</strong>
+  <%= @exchange.variation_dollar %>
+</p>
+
+<p>
+  <strong>Variation euro:</strong>
+  <%= @exchange.variation_euro %>
+</p>
+
+<p>
+  <strong>Wallet:</strong>
+  <%= @exchange.wallet %>
+</p>
+
+<%= link_to 'Edit', edit_exchange_path(@exchange) %> |
+<%= link_to 'Back', exchanges_path %>
