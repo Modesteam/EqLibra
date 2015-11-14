@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151113035439) do
+ActiveRecord::Schema.define(version: 20151114174358) do
+
+  create_table "stocks", force: :cascade do |t|
+    t.string   "name"
+    t.float    "initial_income"
+    t.float    "current_income"
+    t.datetime "buy_date"
+    t.float    "buy_tax"
+    t.float    "amount"
+    t.integer  "wallet_id"
+    t.decimal  "closing_price"
+    t.date     "closing_date"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "stocks", ["wallet_id"], name: "index_stocks_on_wallet_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

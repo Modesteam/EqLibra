@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  initial_income: 1.5
+  current_income: 1.5
+  buy_date: 2015-11-14 15:43:59
+  buy_tax: 1.5
+  amount: 1.5
+  wallet_id: 
+  closing_price: 9.99
+  closing_date: 2015-11-14
+
+two:
+  name: MyString
+  initial_income: 1.5
+  current_income: 1.5
+  buy_date: 2015-11-14 15:43:59
+  buy_tax: 1.5
+  amount: 1.5
+  wallet_id: 
+  closing_price: 9.99
+  closing_date: 2015-11-14
