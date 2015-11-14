@@ -11,63 +11,27 @@
     </div>
   <% end %>
 
+
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+   <b> <%= f.label "Quotation buy values in Real" %></b><br>
+    <%= f.label :dollar_quotation,"Dolar:  #{@exchange[:dollar_quotation]} Variation:  #{@exchange[:variation_dollar]}" %><br>
+    <%= f.label :euro_quotation,"Euro:  #{@exchange[:euro_quotation]} Variation:  #{@exchange[:variation_euro]}" %><br><br>
+
+  <div class="field">
+    <b><%= f.label :exchange_type, "Choose the exchange type." %></b><br>
+    <%= f.select :exchange_type, ['Dolar', 'Euro'] %>
   </div>
+
+
   <div class="field">
-    <%= f.label :initial_income %><br>
+    <%= f.label :initial_income, "Currency value to buy:" %><br>
     <%= f.text_field :initial_income %>
+
   </div>
-  <div class="field">
-    <%= f.label :current_income %><br>
-    <%= f.text_field :current_income %>
-  </div>
-  <div class="field">
-    <%= f.label :efficiency %><br>
-    <%= f.text_field :efficiency %>
-  </div>
-  <div class="field">
-    <%= f.label :initial_dollar_quotation %><br>
-    <%= f.text_field :initial_dollar_quotation %>
-  </div>
-  <div class="field">
-    <%= f.label :initial_euro_quotation %><br>
-    <%= f.text_field :initial_euro_quotation %>
-  </div>
-  <div class="field">
-    <%= f.label :discount %><br>
-    <%= f.text_field :discount %>
-  </div>
-  <div class="field">
-    <%= f.label :buy_date %><br>
-    <%= f.datetime_select :buy_date %>
-  </div>
-  <div class="field">
-    <%= f.label :exchange_type %><br>
-    <%= f.text_field :exchange_type %>
-  </div>
-  <div class="field">
-    <%= f.label :dollar_quotation %><br>
-    <%= f.text_field :dollar_quotation %>
-  </div>
-  <div class="field">
-    <%= f.label :euro_quotation %><br>
-    <%= f.text_field :euro_quotation %>
-  </div>
-  <div class="field">
-    <%= f.label :variation_dollar %><br>
-    <%= f.text_field :variation_dollar %>
-  </div>
-  <div class="field">
-    <%= f.label :variation_euro %><br>
-    <%= f.text_field :variation_euro %>
-  </div>
-  <div class="field">
-    <%= f.label :wallet_id %><br>
-    <%= f.text_field :wallet_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+

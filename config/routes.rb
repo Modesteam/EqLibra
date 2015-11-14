@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
-  resources :exchanges
+  
+  resources :exchanges do
+    member do
+      get :exchanges_movimentation
+    end
+
+    collection do
+      get :exchanges_list
+    end
+  end
+    
   resources :wallets
   devise_for :users
   root to: 'pages#index'
