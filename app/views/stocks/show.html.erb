@@ -47,3 +47,9 @@
 
 <%= link_to 'Edit', edit_stock_path(@stock) %> |
 <%= link_to 'Back', stocks_path %>
+
+<br>
+<p>
+<strong>See the moviment of your Stock here ! </strong>
+</p>
+<%= link_to 'Moviment', stocks_movimentation_stock_path(@stock), class: 'button success small'   %>

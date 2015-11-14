@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
-  resources :stocks
+  
+  resources :stocks do
+    member do
+      get :stocks_movimentation
+    end
+    
+    collection do
+      get :stocks_list
+    end
+  end
+
   resources :wallets
   devise_for :users
   root to: 'pages#index'

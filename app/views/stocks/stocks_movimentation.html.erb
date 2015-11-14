@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<div class="row" > 
+
+<h1> <%= @stock_moviment.name%> Movimentation</h1>
+
+<p>
+ <strong>Gross Income:</strong>
+ <%= @stock_moviment.gross_income.round(2) %>  R$ 
+</p>
+
+<p>
+  <strong>Liquid Income:</strong>
+ <%= @stock_moviment.liquid_income.round(2) %> R$
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brokerage</th>
+      <th>Emoluments</th>
+      <th>Custody</th>
+      <th>Income Tax</th>
+    </tr>
+  </thead>  
+  <tbody>
+      <tr>
+        <td><%= @stock_moviment.brokerage.round(2)  %> R$</td>
+        <td><%= @stock_moviment.emoluments.round(2) %> R$</td>
+        <td><%= @stock_moviment.custody.round(2)  %> R$</td>
+        <td><%= @stock_moviment.income_tax.round(2) %> R$</td>
+      </tr>     
+  </tbody>
+</table>

@@ -10,6 +10,15 @@ class StocksController < ApplicationController
   # GET /stocks/1
   # GET /stocks/1.json
   def show
+    @stock = Stock.find(params[:id])
+  end
+
+  def stocks_list
+    @stocks = Stock.all
+  end
+
+  def stocks_movimentation
+    @stock_moviment = Stock.find(params[:id])
   end
 
   # GET /stocks/new
