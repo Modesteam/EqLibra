@@ -16,6 +16,7 @@
 		
 		<% if user_signed_in? %>
 			<%= yield :top_navBar %>
+			<%= yield :left_sideBar %>
 		<% end %>
 
 		<%= yield :top_content %>
