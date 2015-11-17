@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   get "/analysis/index " => "analysis#index", :as => 'analysis_index'
+  get "/questionnaire/index" => "questionnaire#index", :as => 'questionnaire_index'
+  post "/questionnaire/questionnaire_result" => "questionnaire#questionnaire_result", :as => 'questionnaire_result'
+  get "/questionnaire/user_investment_profile" => "questionnaire#user_investment_profile", :as => 'investment_profile_result'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
