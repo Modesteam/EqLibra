@@ -13,17 +13,24 @@
   </thead>
 
   <tbody>
+    
     <% @wallets.each do |wallet| %>
       <tr>
         <td><%= wallet.name %></td>
         <td><%= wallet.comments %></td>
-        <td><%= wallet.user %></td>
+
+        <!-- EXCLUIR DEPOIS DO DEBUG -->
+        <td><%= wallet.user.name %></td>
+        <!-- EXCLUIR DEPOIS DO DEBUG -->
+        
         <td><%= link_to 'Show', wallet %></td>
         <td><%= link_to 'Edit', edit_wallet_path(wallet) %></td>
         <td><%= link_to 'Destroy', wallet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
+
+  
 </table>
 
 <br>

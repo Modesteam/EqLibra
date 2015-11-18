@@ -4,7 +4,7 @@ class WalletsController < ApplicationController
   # GET /wallets
   # GET /wallets.json
   def index
-    @wallets = Wallet.all
+    @wallets = Wallet.where("user_id = ?", current_user)
   end
 
   # GET /wallets/1
@@ -25,6 +25,7 @@ class WalletsController < ApplicationController
   # POST /wallets.json
   def create
     @wallet = Wallet.new(wallet_params)
+    @wallet.user_id = current_user.id
 
     respond_to do |format|
       if @wallet.save
