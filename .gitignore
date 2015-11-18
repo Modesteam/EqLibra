@@ -1,5 +1,6 @@
 tmp/
-tmp/
+log/
+db/
 .cache
 .log
 .sqlite3
