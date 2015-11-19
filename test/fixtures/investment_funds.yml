@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  buyDate: 2015-11-18
+  admTax: 1.5
+  nfo: MyString
+  fundBegin: 2015-11-18
+  manager: MyString
+  managerContact: MyString
+  shareValue: 1.5
+  capital: 1.5
+  closing_price: 9.99
+  closing_date: 2015-11-18
+  wallet_id: 
+
+two:
+  name: MyString
+  buyDate: 2015-11-18
+  admTax: 1.5
+  nfo: MyString
+  fundBegin: 2015-11-18
+  manager: MyString
+  managerContact: MyString
+  shareValue: 1.5
+  capital: 1.5
+  closing_price: 9.99
+  closing_date: 2015-11-18
+  wallet_id: 
