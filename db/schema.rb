@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151113035439) do
+ActiveRecord::Schema.define(version: 20151117015725) do
+
+  create_table "investment_funds", force: :cascade do |t|
+    t.string   "name"
+    t.date     "buyDate"
+    t.float    "admTax"
+    t.string   "aditionalInfo"
+    t.float    "exitTax"
+    t.date     "fundBegin"
+    t.string   "manager"
+    t.string   "managerContact"
+    t.float    "shareValue"
+    t.float    "capital"
+    t.integer  "wallet_id"
+    t.date     "closing_price"
+    t.date     "closing_date"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "investment_funds", ["wallet_id"], name: "index_investment_funds_on_wallet_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

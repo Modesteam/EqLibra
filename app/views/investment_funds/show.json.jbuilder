@@ -1,0 +1,1 @@
+json.extract! @investment_fund, :id, :name, :buyDate, :admTax, :aditionalInfo, :exitTax, :fundBegin, :manager, :managerContact, :shareValue, :capital, :wallet_id, :closing_price, :closing_date, :wallet_id, :created_at, :updated_at

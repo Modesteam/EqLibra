@@ -4,7 +4,7 @@ class WalletsController < ApplicationController
   # GET /wallets
   # GET /wallets.json
   def index
-    @wallets = Wallet.all
+    @wallets = Wallet.where("user_id = ?", current_user)
   end
 
   # GET /wallets/1
@@ -69,6 +69,6 @@ class WalletsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wallet_params
-      params.require(:wallet).permit(:name, :comments, :user_id)
+      params.require(:wallet).permit(:name, :comments, current_user)
     end
 end
