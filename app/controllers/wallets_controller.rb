@@ -1,5 +1,6 @@
 class WalletsController < ApplicationController
   before_action :set_wallet, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /wallets
   # GET /wallets.json
@@ -25,6 +26,7 @@ class WalletsController < ApplicationController
   # POST /wallets.json
   def create
     @wallet = Wallet.new(wallet_params)
+    @wallet.user_id = current_user.id
 
     respond_to do |format|
       if @wallet.save
