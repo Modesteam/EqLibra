@@ -4,7 +4,8 @@ class InvestmentFundsController < ApplicationController
   # GET /investment_funds
   # GET /investment_funds.json
   def index
-    @investment_funds = InvestmentFund.all
+    @wallet_id = params[:wallet_id]
+    @investment_funds = InvestmentFund.where("wallet_id = ?", @wallet_id)
   end
 
   # GET /investment_funds/1
@@ -69,6 +70,6 @@ class InvestmentFundsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def investment_fund_params
-      params.require(:investment_fund).permit(:name, :buyDate, :admTax, :aditionalInfo, :exitTax, :fundBegin, :manager, :managerContact, :shareValue, :capital, :wallet_id, :closing_price, :closing_date, :wallet_id)
+      params.require(:investment_fund).permit(:name, :buyDate, :admTax, :aditionalInfo, :exitTax, :fundBegin, :manager, :managerContact, :shareValue, :capital, :wallet_id)
     end
 end
