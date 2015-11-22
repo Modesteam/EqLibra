@@ -4196,3 +4196,365 @@ Processing by QuestionnaireController#user_investment_profile as HTML
   Parameters: {"availability"=>"Médio", "profitability"=>"Médio", "risk"=>"Médio"}
   Rendered questionnaire/user_investment_profile.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 09:32:54 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 370ms (Views: 342.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/analysis/index%20" for ::1 at 2015-11-22 09:32:57 -0200
+Processing by AnalysisController#index as HTML
+  Rendered analysis/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/index" for ::1 at 2015-11-22 09:32:59 -0200
+Processing by QuestionnaireController#index as HTML
+  Rendered questionnaire/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questionnaire/questionnaire_result" for ::1 at 2015-11-22 09:33:06 -0200
+Processing by QuestionnaireController#questionnaire_result as HTML
+  Parameters: {"risk"=>"Baixo", "availability"=>"Curto", "profitability"=>"Baixo"}
+Can't verify CSRF token authenticity
+  Rendered questionnaire/questionnaire_result.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 50ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/user_investment_profile?availability=Curto&profitability=Baixo&risk=Baixo" for ::1 at 2015-11-22 09:33:11 -0200
+Processing by QuestionnaireController#user_investment_profile as HTML
+  Parameters: {"availability"=>"Curto", "profitability"=>"Baixo", "risk"=>"Baixo"}
+  Rendered questionnaire/user_investment_profile.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/questionnaire_result" for ::1 at 2015-11-22 09:33:17 -0200
+
+ActionController::RoutingError (No route matches [GET] "/questionnaire/questionnaire_result"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/matheus/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/matheus/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/matheus/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (33.5ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.3ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.0ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (56.9ms)
+
+
+Started POST "/questionnaire/questionnaire_result" for ::1 at 2015-11-22 09:33:21 -0200
+Processing by QuestionnaireController#questionnaire_result as HTML
+  Parameters: {"risk"=>"Baixo", "availability"=>"Curto", "profitability"=>"Baixo"}
+Can't verify CSRF token authenticity
+  Rendered questionnaire/questionnaire_result.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/user_investment_profile?availability=Curto&profitability=Baixo&risk=Baixo" for ::1 at 2015-11-22 09:33:24 -0200
+Processing by QuestionnaireController#user_investment_profile as HTML
+  Parameters: {"availability"=>"Curto", "profitability"=>"Baixo", "risk"=>"Baixo"}
+  Rendered questionnaire/user_investment_profile.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/questionnaire_result" for ::1 at 2015-11-22 09:33:34 -0200
+
+ActionController::RoutingError (No route matches [GET] "/questionnaire/questionnaire_result"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/matheus/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/matheus/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/matheus/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.7ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/matheus/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.0ms)
+
+
+Started POST "/questionnaire/questionnaire_result" for ::1 at 2015-11-22 09:33:37 -0200
+Processing by QuestionnaireController#questionnaire_result as HTML
+  Parameters: {"risk"=>"Baixo", "availability"=>"Curto", "profitability"=>"Baixo"}
+Can't verify CSRF token authenticity
+  Rendered questionnaire/questionnaire_result.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 09:33:41 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 09:41:27 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 173ms (Views: 157.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 09:51:49 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 166ms (Views: 149.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/analysis/index%20" for ::1 at 2015-11-22 09:51:51 -0200
+Processing by AnalysisController#index as HTML
+  Rendered analysis/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/index" for ::1 at 2015-11-22 09:51:52 -0200
+Processing by QuestionnaireController#index as HTML
+  Rendered questionnaire/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questionnaire/questionnaire_result" for ::1 at 2015-11-22 09:51:59 -0200
+Processing by QuestionnaireController#questionnaire_result as HTML
+  Parameters: {"risk"=>"Baixo", "availability"=>"Curto", "profitability"=>"Baixo"}
+Can't verify CSRF token authenticity
+  Rendered questionnaire/questionnaire_result.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/user_investment_profile?availability=Curto&profitability=Baixo&risk=Baixo" for ::1 at 2015-11-22 09:52:03 -0200
+Processing by QuestionnaireController#user_investment_profile as HTML
+  Parameters: {"availability"=>"Curto", "profitability"=>"Baixo", "risk"=>"Baixo"}
+  Rendered questionnaire/user_investment_profile.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 09:59:40 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 187ms (Views: 170.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/analysis/index%20" for ::1 at 2015-11-22 09:59:43 -0200
+Processing by AnalysisController#index as HTML
+  Rendered analysis/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 10:02:32 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 36ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 10:03:33 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 181ms (Views: 165.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/analysis/index%20" for ::1 at 2015-11-22 10:10:12 -0200
+Processing by AnalysisController#index as HTML
+  Rendered analysis/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 10:20:18 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 191ms (Views: 174.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/analysis/index%20" for ::1 at 2015-11-22 10:20:25 -0200
+Processing by AnalysisController#index as HTML
+  Rendered analysis/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/index" for ::1 at 2015-11-22 10:21:23 -0200
+Processing by QuestionnaireController#index as HTML
+  Rendered questionnaire/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 10:30:24 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 187ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/analysis/index%20" for ::1 at 2015-11-22 10:30:25 -0200
+Processing by AnalysisController#index as HTML
+  Rendered analysis/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/index" for ::1 at 2015-11-22 10:30:26 -0200
+Processing by QuestionnaireController#index as HTML
+  Rendered questionnaire/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questionnaire/questionnaire_result" for ::1 at 2015-11-22 10:30:56 -0200
+Processing by QuestionnaireController#questionnaire_result as HTML
+  Parameters: {"risk"=>"Baixo", "availability"=>"Curto", "profitability"=>"Baixo"}
+Can't verify CSRF token authenticity
+  Rendered questionnaire/questionnaire_result.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 10:34:16 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 189ms (Views: 173.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/analysis/index%20" for ::1 at 2015-11-22 10:34:18 -0200
+Processing by AnalysisController#index as HTML
+  Rendered analysis/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/index" for ::1 at 2015-11-22 10:34:19 -0200
+Processing by QuestionnaireController#index as HTML
+  Rendered questionnaire/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questionnaire/questionnaire_result" for ::1 at 2015-11-22 10:34:26 -0200
+Processing by QuestionnaireController#questionnaire_result as HTML
+  Parameters: {"risk"=>"Baixo", "availability"=>"Curto", "profitability"=>"Baixo"}
+Can't verify CSRF token authenticity
+  Rendered questionnaire/questionnaire_result.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/user_investment_profile?availability=Curto&profitability=Baixo&risk=Baixo" for ::1 at 2015-11-22 10:34:34 -0200
+Processing by QuestionnaireController#user_investment_profile as HTML
+  Parameters: {"availability"=>"Curto", "profitability"=>"Baixo", "risk"=>"Baixo"}
+  Rendered questionnaire/user_investment_profile.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/user_investment_profile?availability=Curto&profitability=Baixo&risk=Baixo" for ::1 at 2015-11-22 10:37:11 -0200
+Processing by QuestionnaireController#user_investment_profile as HTML
+  Parameters: {"availability"=>"Curto", "profitability"=>"Baixo", "risk"=>"Baixo"}
+  Rendered questionnaire/user_investment_profile.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 10:42:57 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 181ms (Views: 164.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/analysis/index%20" for ::1 at 2015-11-22 10:42:59 -0200
+Processing by AnalysisController#index as HTML
+  Rendered analysis/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/index" for ::1 at 2015-11-22 10:43:01 -0200
+Processing by QuestionnaireController#index as HTML
+  Rendered questionnaire/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questionnaire/questionnaire_result" for ::1 at 2015-11-22 10:43:08 -0200
+Processing by QuestionnaireController#questionnaire_result as HTML
+  Parameters: {"risk"=>"Baixo", "availability"=>"Curto", "profitability"=>"Baixo"}
+Can't verify CSRF token authenticity
+  Rendered questionnaire/questionnaire_result.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-22 10:52:28 -0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 179ms (Views: 161.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/analysis/index%20" for ::1 at 2015-11-22 10:52:30 -0200
+Processing by AnalysisController#index as HTML
+  Rendered analysis/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/index" for ::1 at 2015-11-22 10:52:38 -0200
+Processing by QuestionnaireController#index as HTML
+  Rendered questionnaire/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questionnaire/questionnaire_result" for ::1 at 2015-11-22 10:52:45 -0200
+Processing by QuestionnaireController#questionnaire_result as HTML
+  Parameters: {"risk"=>"Baixo", "availability"=>"Curto", "profitability"=>"Baixo"}
+Can't verify CSRF token authenticity
+  Rendered questionnaire/questionnaire_result.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questionnaire/user_investment_profile?availability=Curto&profitability=Baixo&risk=Baixo" for ::1 at 2015-11-22 10:52:48 -0200
+Processing by QuestionnaireController#user_investment_profile as HTML
+  Parameters: {"availability"=>"Curto", "profitability"=>"Baixo", "risk"=>"Baixo"}
+  Rendered questionnaire/user_investment_profile.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
