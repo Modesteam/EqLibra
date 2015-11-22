@@ -51,11 +51,6 @@
 </p>
 
 <p>
-  <strong>Wallet:</strong>
-  <%= @investment_fund.wallet_id %>
-</p>
-
-<p>
   <strong>Closing price:</strong>
   <%= @investment_fund.closing_price %>
 </p>
@@ -67,7 +62,7 @@
 
 <p>
   <strong>Wallet:</strong>
-  <%= @investment_fund.wallet %>
+  <%= @investment_fund.wallet.name %>
 </p>
 
 <%= link_to 'Edit', edit_investment_fund_path(@investment_fund) %> |
