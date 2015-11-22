@@ -1,0 +1,45 @@
+<%= form_for(@direct_treasury) do |f| %>
+  <% if @direct_treasury.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@direct_treasury.errors.count, "error") %> prohibited this direct_treasury from being saved:</h2>
+
+      <ul>
+      <% @direct_treasury.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :buyDate %><br>
+    <%= f.date_select :buyDate %>
+  </div>
+  <div class="field">
+    <%= f.label :dueDate %><br>
+    <%= f.date_select :dueDate %>
+  </div>
+  <div class="field">
+    <%= f.label :investment_value %><br>
+    <%= f.number_field :investment_value, :step => 1.0 %>
+  </div>
+  <div class="field">
+    <%= f.label :acquisitionsTax %><br>
+    <%= f.number_field :acquisitionsTax, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :admTax %><br>
+    <%= f.number_field :admTax, :step => 0.01 %>
+  </div>
+  <div class="field">
+    <%= f.label :wallet_id %><br>
+    <%= f.number_field :wallet_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

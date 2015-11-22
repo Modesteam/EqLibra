@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @direct_treasury.title %>
+</p>
+
+<p>
+  <strong>Buydate:</strong>
+  <%= @direct_treasury.buyDate %>
+</p>
+
+<p>
+  <strong>Duedate:</strong>
+  <%= @direct_treasury.dueDate %>
+</p>
+
+<p>
+  <strong>Investment value:</strong>
+  <%= @direct_treasury.investment_value %>
+</p>
+
+<p>
+  <strong>Acquisitionstax:</strong>
+  <%= @direct_treasury.acquisitionsTax %>
+</p>
+
+<p>
+  <strong>Admtax:</strong>
+  <%= @direct_treasury.admTax %>
+</p>
+
+<p>
+  <strong>Wallet:</strong>
+  <%= @direct_treasury.wallet.name %>
+</p>
+
+<%= link_to 'Edit', edit_direct_treasury_path(@direct_treasury) %> |
+<%= link_to 'Back', wallets_path %>
