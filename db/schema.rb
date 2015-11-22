@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151122021755) do
+ActiveRecord::Schema.define(version: 20151122181430) do
+
+  create_table "direct_treasuries", force: :cascade do |t|
+    t.string   "title"
+    t.date     "buyDate"
+    t.date     "dueDate"
+    t.float    "investment_value"
+    t.float    "acquisitionsTax"
+    t.float    "admTax"
+    t.integer  "wallet_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "direct_treasuries", ["wallet_id"], name: "index_direct_treasuries_on_wallet_id"
 
   create_table "exchanges", force: :cascade do |t|
     t.string   "name"

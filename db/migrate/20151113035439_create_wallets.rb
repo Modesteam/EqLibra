@@ -4,7 +4,7 @@ class CreateWallets < ActiveRecord::Migration
       t.string :name
       t.string :comments
       t.belongs_to :user, index: true, foreign_key: true
-      t.references :investment_fund, :stocks, :exchanges
+      t.references :investment_fund, :stocks, :exchanges, :direct_treasuries
 
       t.timestamps null: false
     end
