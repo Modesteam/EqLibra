@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>User:</strong>
+  <%= @wallet.user.name %>
+</p>
+<p>
   <strong>Name:</strong>
   <%= @wallet.name %>
 </p>
@@ -10,10 +14,6 @@
   <%= @wallet.comments %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @wallet.user %>
-</p>
 
 <%= link_to 'Edit', edit_wallet_path(@wallet) %> |
 <%= link_to 'Back', wallets_path %>

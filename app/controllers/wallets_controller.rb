@@ -1,10 +1,11 @@
 class WalletsController < ApplicationController
   before_action :set_wallet, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /wallets
   # GET /wallets.json
   def index
-    @wallets = Wallet.all
+    @wallets = Wallet.where("user_id = ?", current_user)
   end
 
   # GET /wallets/1
@@ -25,6 +26,7 @@ class WalletsController < ApplicationController
   # POST /wallets.json
   def create
     @wallet = Wallet.new(wallet_params)
+    @wallet.user_id = current_user.id
 
     respond_to do |format|
       if @wallet.save
@@ -69,6 +71,6 @@ class WalletsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wallet_params
-      params.require(:wallet).permit(:name, :comments, :user_id)
+      params.require(:wallet).permit(:name, :comments, current_user)
     end
 end

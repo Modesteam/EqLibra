@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  initial_income: 1.5
+  current_income: 1.5
+  efficiency: 1.5
+  initial_dollar_quotation: 1.5
+  initial_euro_quotation: 1.5
+  discount: 1.5
+  buy_date: 2015-11-22 00:17:55
+  exchange_type: MyString
+  dollar_quotation: 1.5
+  euro_quotation: 1.5
+  variation_dollar: MyString
+  variation_euro: MyString
+  wallet_id: 
+
+two:
+  name: MyString
+  initial_income: 1.5
+  current_income: 1.5
+  efficiency: 1.5
+  initial_dollar_quotation: 1.5
+  initial_euro_quotation: 1.5
+  discount: 1.5
+  buy_date: 2015-11-22 00:17:55
+  exchange_type: MyString
+  dollar_quotation: 1.5
+  euro_quotation: 1.5
+  variation_dollar: MyString
+  variation_euro: MyString
+  wallet_id: 

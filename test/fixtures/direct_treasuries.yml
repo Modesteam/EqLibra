@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  buyDate: 2015-11-22
+  dueDate: 2015-11-22
+  investment_value: 1.5
+  acquisitionsTax: 1.5
+  admTax: 1.5
+  wallet_id: 
+
+two:
+  title: MyString
+  buyDate: 2015-11-22
+  dueDate: 2015-11-22
+  investment_value: 1.5
+  acquisitionsTax: 1.5
+  admTax: 1.5
+  wallet_id: 

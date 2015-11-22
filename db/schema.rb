@@ -11,7 +11,76 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151113035439) do
+ActiveRecord::Schema.define(version: 20151122181430) do
+
+  create_table "direct_treasuries", force: :cascade do |t|
+    t.string   "title"
+    t.date     "buyDate"
+    t.date     "dueDate"
+    t.float    "investment_value"
+    t.float    "acquisitionsTax"
+    t.float    "admTax"
+    t.integer  "wallet_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "direct_treasuries", ["wallet_id"], name: "index_direct_treasuries_on_wallet_id"
+
+  create_table "exchanges", force: :cascade do |t|
+    t.string   "name"
+    t.float    "initial_income"
+    t.float    "current_income"
+    t.float    "efficiency"
+    t.float    "initial_dollar_quotation"
+    t.float    "initial_euro_quotation"
+    t.float    "discount"
+    t.datetime "buy_date"
+    t.string   "exchange_type"
+    t.float    "dollar_quotation"
+    t.float    "euro_quotation"
+    t.string   "variation_dollar"
+    t.string   "variation_euro"
+    t.integer  "wallet_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "exchanges", ["wallet_id"], name: "index_exchanges_on_wallet_id"
+
+  create_table "investment_funds", force: :cascade do |t|
+    t.string   "name"
+    t.date     "buyDate"
+    t.float    "admTax"
+    t.string   "aditionalInfo"
+    t.float    "exitTax"
+    t.date     "fundBegin"
+    t.string   "manager"
+    t.string   "managerContact"
+    t.float    "shareValue"
+    t.float    "capital"
+    t.integer  "wallet_id"
+    t.date     "closing_price"
+    t.date     "closing_date"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "investment_funds", ["wallet_id"], name: "index_investment_funds_on_wallet_id"
+
+  create_table "stocks", force: :cascade do |t|
+    t.string   "name"
+    t.float    "initial_income"
+    t.float    "current_income"
+    t.datetime "buy_date"
+    t.float    "buy_tax"
+    t.float    "amount"
+    t.integer  "wallet_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "stocks", ["wallet_id"], name: "index_stocks_on_wallet_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
