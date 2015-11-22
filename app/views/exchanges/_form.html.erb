@@ -1,0 +1,42 @@
+<%= form_for(@exchange) do |f| %>
+  <% if @exchange.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exchange.errors.count, "error") %> prohibited this exchange from being saved:</h2>
+
+      <ul>
+      <% @exchange.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="field">
+   <b> <%= f.label "Quotation buy values in Real" %></b><br>
+    <%= f.label :dollar_quotation,"Dolar:  #{@exchange[:dollar_quotation]} Variation:  #{@exchange[:variation_dollar]}" %><br>
+    <%= f.label :euro_quotation,"Euro:  #{@exchange[:euro_quotation]} Variation:  #{@exchange[:variation_euro]}" %><br><br>
+
+  <div class="field">
+    <b><%= f.label :exchange_type, "Choose the exchange type." %></b><br>
+    <%= f.select :exchange_type, ['Dolar', 'Euro'] %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :initial_income, "Currency value to buy:" %><br>
+    <%= f.text_field :initial_income %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wallet_id %><br>
+    <%= f.number_field :wallet_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
