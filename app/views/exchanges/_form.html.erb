@@ -12,12 +12,12 @@
   <% end %>
 
    <div class="field">
-   <b> <%= f.label "Quotation buy values in Real" %></b><br>
+   <b> <%= f.label "Cotação de compra em Real" %></b><br>
     <%= f.label :dollar_quotation,"Dolar:  #{@exchange[:dollar_quotation]} Variation:  #{@exchange[:variation_dollar]}" %><br>
     <%= f.label :euro_quotation,"Euro:  #{@exchange[:euro_quotation]} Variation:  #{@exchange[:variation_euro]}" %><br><br>
 
   <div class="field">
-    <b><%= f.label :exchange_type, "Choose the exchange type." %></b><br>
+    <b><%= f.label :exchange_type, "Escolha o tipo de câmbio" %></b><br>
     <%= f.select :exchange_type, ['Dolar', 'Euro'] %>
   </div>
 
@@ -27,7 +27,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :initial_income, "Currency value to buy:" %><br>
+    <%= f.label :initial_income, "Valor de compra da moeda:" %><br>
     <%= f.text_field :initial_income %>
   </div>
 

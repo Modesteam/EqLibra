@@ -1,48 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Exchanges</h1>
+<h1>Câmbios</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Initial income</th>
-      <th>Current income</th>
-      <th>Efficiency</th>
-      <th>Initial dollar quotation</th>
-      <th>Initial euro quotation</th>
-      <th>Discount</th>
-      <th>Buy date</th>
-      <th>Exchange type</th>
-      <th>Dollar quotation</th>
-      <th>Euro quotation</th>
-      <th>Variation dollar</th>
-      <th>Variation euro</th>
-      <th>Wallet</th>
+      <th>Tipo de Câmbio</th>
+      <th>Valor do Invest. Inicial</th>
+      <th>Data de Compra</th>
+      <th>Carteira</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+   <tbody>
     <% @exchanges.each do |exchange| %>
       <tr>
-        <td><%= exchange.name %></td>
-        <td><%= exchange.initial_income %></td>
-        <td><%= exchange.current_income %></td>
-        <td><%= exchange.efficiency %></td>
-        <td><%= exchange.initial_dollar_quotation %></td>
-        <td><%= exchange.initial_euro_quotation %></td>
-        <td><%= exchange.discount %></td>
-        <td><%= exchange.buy_date %></td>
         <td><%= exchange.exchange_type %></td>
-        <td><%= exchange.dollar_quotation %></td>
-        <td><%= exchange.euro_quotation %></td>
-        <td><%= exchange.variation_dollar %></td>
-        <td><%= exchange.variation_euro %></td>
-        <td><%= exchange.wallet.name %></td>
-        <td><%= link_to 'Show', exchange %></td>
-        <td><%= link_to 'Edit', edit_exchange_path(exchange) %></td>
-        <td><%= link_to 'Destroy', exchange, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= exchange.initial_income %></td>
+        <td><%= exchange.created_at %></td>
+        <td><%= link_to 'Exibir', exchange %></td>
+        <td><%= link_to 'Editar', edit_exchange_path(exchange) %></td>
+        <td><%= link_to 'Apagar', exchange, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -50,6 +29,6 @@
 
 <br>
 
-<%= link_to 'New Exchange', new_exchange_path %>
+<%= link_to 'Novo', new_exchange_path %>
 <br>
-<%= link_to 'Back', wallets_path %>
+<%= link_to 'Voltar', wallets_path %>
