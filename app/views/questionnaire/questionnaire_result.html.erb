@@ -1,0 +1,7 @@
+<h1>Atributos informados no Questionário</h1>
+
+Apetência ao Risco: <%= @risk %><br>
+Disponibilidade por Aplicação: <%= @availability %><br>
+Nível de oscilação de Rendibilidade: <%= @profitability %><br>
+
+<%= link_to 'Visualizar Probabilidades dos Perfis de Investimento', investment_profile_result_path(:risk => "#{@risk}", :availability => "#{@availability}", :profitability => "#{@profitability}") %>
