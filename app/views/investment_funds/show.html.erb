@@ -1,53 +1,59 @@
+ 
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @investment_fund.name %>
 </p>
 
 <p>
-  <strong>Buydate:</strong>
+  <strong>Data da Compra:</strong>
   <%= @investment_fund.buyDate %>
 </p>
 
 <p>
-  <strong>Admtax:</strong>
+  <strong>Taxa Administrativa:</strong>
   <%= @investment_fund.admTax %>
 </p>
 
 <p>
-  <strong>Aditionalinfo:</strong>
+  <strong>Observações:</strong>
   <%= @investment_fund.aditionalInfo %>
 </p>
 
 <p>
-  <strong>Exittax:</strong>
+  <strong>Taxa de Saída:</strong>
   <%= @investment_fund.exitTax %>
 </p>
 
 <p>
-  <strong>Fundbegin:</strong>
+  <strong>Início do Fundo:</strong>
   <%= @investment_fund.fundBegin %>
 </p>
 
 <p>
-  <strong>Manager:</strong>
+  <strong>Gestor:</strong>
   <%= @investment_fund.manager %>
 </p>
 
 <p>
-  <strong>Managercontact:</strong>
+  <strong>Contado do Gestor:</strong>
   <%= @investment_fund.managerContact %>
 </p>
 
 <p>
-  <strong>Sharevalue:</strong>
+  <strong>Valor da Cota:</strong>
   <%= @investment_fund.shareValue %>
 </p>
 
 <p>
-  <strong>Capital:</strong>
+  <strong>Capital Investido:</strong>
   <%= @investment_fund.capital %>
+</p>
+
+<p>
+  <strong>Carteira:</strong>
+  <%= @investment_fund.wallet %>
 </p>
 
 <p>
@@ -56,15 +62,10 @@
 </p>
 
 <p>
-  <strong>Closing date:</strong>
+  <strong>Closing:</strong>
   <%= @investment_fund.closing_date %>
 </p>
 
-<p>
-  <strong>Wallet:</strong>
-  <%= @investment_fund.wallet.name %>
-</p>
 
-<%= link_to 'Edit', edit_investment_fund_path(@investment_fund) %> |
-<%= link_to 'Back', wallets_path %>
-
+<%= link_to 'Editar', edit_investment_fund_path(@investment_fund),  class: 'button info tiny' %> |
+<%= link_to 'Voltar', investment_funds_path,  class: 'button info tiny' %>

@@ -1,21 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Investment Funds</h1>
+<h1>Fundo de Investimento</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Buydate</th>
-      <th>Admtax</th>
-      <th>Aditionalinfo</th>
-      <th>Exittax</th>
-      <th>Fundbegin</th>
-      <th>Manager</th>
-      <th>Managercontact</th>
-      <th>Sharevalue</th>
-      <th>Capital</th>
-      <th>Wallet</th>
+      <th>Nome</th>
+      <th>Data de Compra</th>
+      <th>Taxa Administrativa</th>
+      <th>Observações</th>
+      <th>Taxa de Saída</th>
+      <th>Início do Fundo</th>
+      <th>Gestor</th>
+      <th>Contato do Gestor</th>
+      <th>Valor da Cota</th>
+      <th>Capital Investido</th>
+      <th>Carteira</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -34,9 +34,9 @@
         <td><%= investment_fund.shareValue %></td>
         <td><%= investment_fund.capital %></td>
         <td><%= investment_fund.wallet.name %></td>
-        <td><%= link_to 'Show', investment_fund %></td>
-        <td><%= link_to 'Edit', edit_investment_fund_path(investment_fund) %></td>
-        <td><%= link_to 'Destroy', investment_fund, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', investment_fund %></td>
+        <td><%= link_to 'Editar', edit_investment_fund_path(investment_fund) %></td>
+        <td><%= link_to 'Apagar', investment_fund, method: :delete, data: { confirm: 'Tem Certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -44,6 +44,6 @@
 
 <br>
 
-<%= link_to 'New Investment fund', new_investment_fund_path %>
+<%= link_to 'Novo Fundo de Investmento', new_investment_fund_path %>
 <br>
-<%= link_to 'Back', wallets_path %>
+<%= link_to 'Voltar', wallets_path %>

@@ -12,50 +12,50 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, "Nome" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :buyDate %><br>
+    <%= f.label :buyDate, "Data de Compra" %><br>
     <%= f.date_select :buyDate %>
   </div>
   <div class="field">
-    <%= f.label :admTax %><br>
+    <%= f.label :admTax, "Taxa Administrativa" %><br>
     <%= f.number_field :admTax, :step => 0.01 %>
   </div>
   <div class="field">
-    <%= f.label :aditionalInfo %><br>
+    <%= f.label :aditionalInfo, "Observações" %><br>
     <%= f.text_field :aditionalInfo %>
   </div>
   <div class="field">
-    <%= f.label :exitTax %><br>
+    <%= f.label :exitTax, "Taxa de Saída" %><br>
     <%= f.number_field :exitTax, :step => 0.01 %>
   </div>
   <div class="field">
-    <%= f.label :fundBegin %><br>
+    <%= f.label :fundBegin, "Início do Fundo"  %><br>
     <%= f.date_select :fundBegin %>
   </div>
   <div class="field">
-    <%= f.label :manager %><br>
+    <%= f.label :manager, "Gestor" %><br>
     <%= f.text_field :manager %>
   </div>
   <div class="field">
-    <%= f.label :managerContact %><br>
+    <%= f.label :managerContact, "Contato do Gestor" %><br>
     <%= f.text_field :managerContact %>
   </div>
   <div class="field">
-    <%= f.label :shareValue %><br>
+    <%= f.label :shareValue, "Valor da Cota" %><br>
     <%= f.number_field :shareValue, :step => 0.01 %>
   </div>
   <div class="field">
-    <%= f.label :capital %><br>
+    <%= f.label :capital, "Capital Investido" %><br>
     <%= f.number_field :capital, :step => 0.01 %>
   </div>
   <div class="field">
-    <%= f.label :wallet_id %><br>
+    <%= f.label :wallet_id, "Carteira" %><br>
     <%= f.number_field :wallet_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Enviar" %>
   </div>
 <% end %>
