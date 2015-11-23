@@ -13055,3 +13055,659 @@ Processing by PagesController#home as HTML
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
   Rendered pages/home.html.erb within layouts/application (3.3ms)
 Completed 200 OK in 392ms (Views: 387.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 20:41:02 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (5.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pages/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 723ms (Views: 637.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-11-23 20:41:06 -0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dfu8eTCrR7XbSRwQYZywIQ90YrHgL5Kthh6ojPyM1xvaEKa49VgTVwak3PqIYW+fvwADtUQRVtwJMoeewkc1Ng=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 20:41:06 -0200
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-11-23 20:41:06 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (7.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 601ms (Views: 599.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:41:25 -0200
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:41:25 -0200
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:41:35 -0200
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:41:35 -0200
+
+
+Started GET "/users/auth/facebook/callback?code=AQBMwdjpMocndh2DxKXuSHshOaPfNqf1fn7mrjDO9Fw2hJqV6s0UvJcxuhag0lAqevK9hFnKS0RIAibmZ0UoZIJ4vU03aRXgaC4QmBm8UZUOliTJzRPQkQl9xh3U3AhJAtLCUjzydT01m0OUA60th8GVpteDwVK2II1YDHqm0SZZsxubI6qKQGEbEnl4zu8T-JRLR7Aczb8jmacg4Ka2dTRfz3gl_9FBGmvXRCc6fHHrgJlbpmCY6VWmwH1jRaG3zCeFlRz-ZJIf4MWLE0xQJN0f-VpuHS__Z1TA6M7McPJZ3ysdvIP9m_fNHP-KMfuXDmY&state=e7d38182c7548c845b7e2b2915b039fbfcfc7709530bd7aa" for ::1 at 2015-11-23 20:41:47 -0200
+
+AbstractController::ActionNotFound (The action 'facebook' could not be found for Devise::OmniauthCallbacksController):
+  actionpack (4.2.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth2 (1.1.2) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.6ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.3ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (95.9ms)
+
+
+Started GET "/users/auth/facebook/callback?code=AQBpA8xY8YCnlDUW_B9f08P67yL_kVkRvKpZDQ6ZP8T9h1QgU0WDqT7btuxNqT35B5siVlCwRM1JKMnGsxYsuQ5PxSmobzli330xZaJbB-Jb1KcD_Qr8FgobnsB4PQHepqKg8Nih6RTvu67Gc4EOjwtyXQZlyvNS-6Z8kn8TMgVsnUS0Ky_YHxxpDRWAIQors-7Se87-tSESCpJtqOotbDSYcJhYhx2bZYETMHue-kt87ltzZZrt941Ihy0yvblF2SqyoU28h-TFlGjP4EOQZe1ry_D_cQGmxK7JogLYRF8WU4w8irXdRsi4uq6ZqkBI7ws&state=e7d38182c7548c845b7e2b2915b039fbfcfc7709530bd7aa" for ::1 at 2015-11-23 20:43:17 -0200
+
+AbstractController::ActionNotFound (The action 'facebook' could not be found for Devise::OmniauthCallbacksController):
+  actionpack (4.2.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth2 (1.1.2) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (9.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.0ms)
+
+
+Started GET "/users/auth/facebook/callback?code=AQBLPoFZ4o-NqjxmwrsFJkFzl-Mv4q7NKKOxA_3ls2EY330ThOuAxqVlYo2W1_CmiZ9IVTlTjbGItoKzV_z9Ixot5nFbSPT6FRuGap2MjobOWuoNMGd-b7qgxfFpc28tWvnErGwr0aVrDucbxhnEy8pvlPC9lfOTcm89mckOa-CISPES91Oog2whwHb8cKbQ9MxPI9rGVS7LhVBkN2rnJbgaY0-UObXjzSXjRlXAtrWxck3qT-EMOvgUcXVkmjQCWDZ4oMNkSm6C34wPS6FDTmsfyMgGRxyEisI7oqUTHhaGc1PmpSnOiDJYZpoquC-AoVQ&state=e7d38182c7548c845b7e2b2915b039fbfcfc7709530bd7aa" for ::1 at 2015-11-23 20:43:22 -0200
+
+AbstractController::ActionNotFound (The action 'facebook' could not be found for Devise::OmniauthCallbacksController):
+  actionpack (4.2.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth2 (1.1.2) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (8.2ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (56.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (99.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 20:43:28 -0200
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-11-23 20:43:28 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 473ms (Views: 445.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:43:31 -0200
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:43:31 -0200
+
+
+Started GET "/users/auth/facebook/callback?code=AQAXOpXoLsUzstpCmhFlqBXWTZISv-enqJ6r45y_vrAtBoNpoOL0dPr31eMci1TIvPs3PAhnr7l3ayoAp_PpDigFtiKcNcIKnOuEiZ_RVaLWXKiP7mm9nRWxHtnHpFQcTXXNNwcycMp7rkMlPYorCW2SamcEapVsVKYbtwo-AvegJMrYahZAK5aAXbPpX18-580_1V40xr0hg931DQcYWqdVfG2PtPyWrAZh6dAmwZCoYJujya2nDYTZgWnOdnEiwo-HzgIACra5pDXlCkeEabF9M92AsZDUFbXUQY12yFeCbF7MqGQTrMHrt_iRnIplWsA&state=9fdb858f1093e4de20f54c3545557b9b1876be22c2d2fa96" for ::1 at 2015-11-23 20:43:33 -0200
+
+AbstractController::ActionNotFound (The action 'facebook' could not be found for Devise::OmniauthCallbacksController):
+  actionpack (4.2.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth2 (1.1.2) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.9ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (6.3ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (51.0ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (108.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 20:44:40 -0200
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-11-23 20:44:41 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 464ms (Views: 431.4ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:44:44 -0200
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:44:44 -0200
+
+
+Started GET "/users/auth/facebook/callback?code=AQBnTn3pRjF2eUoiGSffRf4xj8OFgnesrQXeZxGLMwsCr2vnQBuibkmXAicYPeHc8a837_dGZZJnguYf5jDruwpcWppIKIb78S0syVjadGM6IKs7nBk-BtWTDVqm-dP4NZVvqs9ThHrTumR7yjK9hC923FmcSV3Cho7-0IQzMxPogxelpbVv69G3WeObYK0wWxPHhQwjOkPFIaVjGcwfYAhOstEboOgTdnz--Dp2tz1vGn40eAgttv3dOibi9gCpyeIGDzUuBBuY7xwI9RXtAVs47OAuFC18r5TM86L5GmuA6bPBEIC1rYojYMvZ377Obc4&state=1e1c9e3c9ba244ec5eedcbd601aea80a6a71b22ea02fd49a" for ::1 at 2015-11-23 20:44:44 -0200
+Processing by CallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBnTn3pRjF2eUoiGSffRf4xj8OFgnesrQXeZxGLMwsCr2vnQBuibkmXAicYPeHc8a837_dGZZJnguYf5jDruwpcWppIKIb78S0syVjadGM6IKs7nBk-BtWTDVqm-dP4NZVvqs9ThHrTumR7yjK9hC923FmcSV3Cho7-0IQzMxPogxelpbVv69G3WeObYK0wWxPHhQwjOkPFIaVjGcwfYAhOstEboOgTdnz--Dp2tz1vGn40eAgttv3dOibi9gCpyeIGDzUuBBuY7xwI9RXtAVs47OAuFC18r5TM86L5GmuA6bPBEIC1rYojYMvZ377Obc4", "state"=>"1e1c9e3c9ba244ec5eedcbd601aea80a6a71b22ea02fd49a"}
+  [1m[35mUser Load (9.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10153376660898221'  ORDER BY "users"."id" ASC LIMIT 1
+SQLite3::SQLException: no such column: users.provider: SELECT  "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10153376660898221'  ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 9.5ms)
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.provider: SELECT  "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10153376660898221'  ORDER BY "users"."id" ASC LIMIT 1):
+  app/models/user.rb:9:in `from_omniauth'
+  app/controllers/callbacks_controller.rb:3:in `facebook'
+
+
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.1ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (31.1ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.0ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (8.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.7ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (74.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCollumsToUsers (20151113200904)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddProviderUidToUsers (20151123225551)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "provider" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "uid" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151123225551"]]
+  [1m[35m (11.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_direct_treasuries_on_wallet_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_direct_treasuries_on_wallet_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exchanges_on_wallet_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exchanges_on_wallet_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_investment_funds_on_wallet_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_investment_funds_on_wallet_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stocks_on_wallet_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stocks_on_wallet_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_wallets_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_wallets_on_user_id' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2015-11-23 20:56:42 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 59ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-11-23 20:56:42 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (27.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (85.6ms)
+Completed 200 OK in 1153ms (Views: 1099.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:56:46 -0200
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:56:46 -0200
+
+
+Started GET "/users/auth/facebook/callback?code=AQBpKYzgY2CJa2J7sD8trlcXYJrgUE-FfrHDhvC9M3ZGPV3JppbklLPhOFwu9SZBApUb8GVas9pVOQUd9ttq0nicwBbYuMeoRpP7kGZaovO_79w16-NmOzSKKq_mD1pTsOI7mNbD7hKWZFdsuYUoqCed0E1eyaTqJG0gwiNmM3fhAS9lwOmMD7Cbcc5jtBWl4m-ECanmV1ss4KD83_CdgyYwPHJRtQ5NPbAqhCiKLE1gPO40eCF_R4RvHlWrxC6ADvjV0nta_5A1-m3cPBXGirBbVhk6NtbC6nbE-V42RDTIRSF-s2lCjSGMWaQegrRmWZA&state=1fb22a1191014c12f9a7abb0693576e1aff0b79a73892723" for ::1 at 2015-11-23 20:56:47 -0200
+Processing by CallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBpKYzgY2CJa2J7sD8trlcXYJrgUE-FfrHDhvC9M3ZGPV3JppbklLPhOFwu9SZBApUb8GVas9pVOQUd9ttq0nicwBbYuMeoRpP7kGZaovO_79w16-NmOzSKKq_mD1pTsOI7mNbD7hKWZFdsuYUoqCed0E1eyaTqJG0gwiNmM3fhAS9lwOmMD7Cbcc5jtBWl4m-ECanmV1ss4KD83_CdgyYwPHJRtQ5NPbAqhCiKLE1gPO40eCF_R4RvHlWrxC6ADvjV0nta_5A1-m3cPBXGirBbVhk6NtbC6nbE-V42RDTIRSF-s2lCjSGMWaQegrRmWZA", "state"=>"1fb22a1191014c12f9a7abb0693576e1aff0b79a73892723"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10153376660898221"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'fill_sk8@hotmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("provider", "uid", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["provider", "facebook"], ["uid", "10153376660898221"], ["email", "fill_sk8@hotmail.com"], ["encrypted_password", "$2a$10$TmA7fkeM3TfZ3HOlnAYZ/ucplb97T16fAZGzcnOy0xTFaHQgEX1I."], ["created_at", "2015-11-23 22:56:48.894048"], ["updated_at", "2015-11-23 22:56:48.894048"]]
+  [1m[35m (37.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-11-23 22:56:48.935860"], ["current_sign_in_at", "2015-11-23 22:56:48.935860"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-11-23 22:56:48.937350"], ["id", 5]]
+  [1m[36m (17.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 418ms (ActiveRecord: 58.8ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 20:56:48 -0200
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 642ms (Views: 633.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-11-23 20:56:56 -0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NPk42WfvZTX+XYM6+sDRz191ASeCVzPoikMfLKvmsjIuMkPls9UOmZk02w6EoOe1SMbix1qS38MZDWjqM1NOPg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 20:56:56 -0200
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-11-23 20:56:56 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (10.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 583ms (Views: 582.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wallets" for ::1 at 2015-11-23 20:57:32 -0200
+Processing by WalletsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-11-23 20:57:32 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 456ms (Views: 454.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:57:35 -0200
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:57:35 -0200
+
+
+Started GET "/users/auth/facebook/callback?code=AQCb16YvUMC-gdAWDCxUR9UJ9GlODyGcp8CeFUyU0oA4g-4tWJ5gn3sl5lk8BZOQIKA5SSrN_BYfqJEFSfqWIJ2XcyKaa9W_Q0cNGtKyhkN_UxluPsSmhZUnaTmsjjcWYvYwQWR5I--6uz4Q_x3_cxFeoHDccVE2K3KyS83fqLDQEQozzll_5lhuqHp688W-flkqOXcsqmzh31t3TlLMRp4DHRUW9g0sPPd82mW9v8bQxZbbglO6tf-KhBqdS7hkPAptskqNxWrJTlQNAFx2FWOl52TAkKh2LHWObUwY7Ej4TKHN5QcloU3ubMBG7bfZ7Jg&state=36875834554f274a44d3229b8354966dd64b8b7e13f286dc" for ::1 at 2015-11-23 20:57:36 -0200
+Processing by CallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCb16YvUMC-gdAWDCxUR9UJ9GlODyGcp8CeFUyU0oA4g-4tWJ5gn3sl5lk8BZOQIKA5SSrN_BYfqJEFSfqWIJ2XcyKaa9W_Q0cNGtKyhkN_UxluPsSmhZUnaTmsjjcWYvYwQWR5I--6uz4Q_x3_cxFeoHDccVE2K3KyS83fqLDQEQozzll_5lhuqHp688W-flkqOXcsqmzh31t3TlLMRp4DHRUW9g0sPPd82mW9v8bQxZbbglO6tf-KhBqdS7hkPAptskqNxWrJTlQNAFx2FWOl52TAkKh2LHWObUwY7Ej4TKHN5QcloU3ubMBG7bfZ7Jg", "state"=>"36875834554f274a44d3229b8354966dd64b8b7e13f286dc"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10153376660898221"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2015-11-23 22:57:37.345598"], ["sign_in_count", 2], ["updated_at", "2015-11-23 22:57:37.346535"], ["id", 5]]
+  [1m[36m (54.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/wallets
+Completed 302 Found in 65ms (ActiveRecord: 54.9ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:57:37 -0200
+
+
+Started GET "/wallets" for ::1 at 2015-11-23 20:57:37 -0200
+Processing by WalletsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mWallet Load (0.2ms)[0m  [1mSELECT "wallets".* FROM "wallets" WHERE (user_id = 5)[0m
+  Rendered wallets/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 580ms (Views: 547.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 20:57:38 -0200
+
+
+Started GET "/users/auth/facebook/callback?code=AQBZ7QHpe7dOUC2FCimjOCO82z6tZeZ_ZFkwiPeQc7QAWuheb5KcjMJSP9yRYbtiWawBanAmPx2AtZz_iKb87H2gwgFBzUnJ8PGCEp-2Xa4BMuWHUTSmHic8pAgfq78vzvb0wu9ee8BRZIu1C1PSgG1N7XSMrL34HJqbCdU8lQe3VdBBjYUidN08T_a9dbIIjUn477cvAOgpcaN48qUn5TSCee-LVYzoR0rnBWHRKQfsR_5O9OzAjE7qz3N84VgDZ0jiJcibOlD9eatYjPwxzmPesFCBAe1oEV_Jdg7Xy34efAZGC8fyQFbdCs7-T17bYec&state=f351a9f8ffddcc7b991419fd282feefbb512d41de47820b6" for ::1 at 2015-11-23 20:57:38 -0200
+Processing by CallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBZ7QHpe7dOUC2FCimjOCO82z6tZeZ_ZFkwiPeQc7QAWuheb5KcjMJSP9yRYbtiWawBanAmPx2AtZz_iKb87H2gwgFBzUnJ8PGCEp-2Xa4BMuWHUTSmHic8pAgfq78vzvb0wu9ee8BRZIu1C1PSgG1N7XSMrL34HJqbCdU8lQe3VdBBjYUidN08T_a9dbIIjUn477cvAOgpcaN48qUn5TSCee-LVYzoR0rnBWHRKQfsR_5O9OzAjE7qz3N84VgDZ0jiJcibOlD9eatYjPwxzmPesFCBAe1oEV_Jdg7Xy34efAZGC8fyQFbdCs7-T17bYec", "state"=>"f351a9f8ffddcc7b991419fd282feefbb512d41de47820b6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10153376660898221"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-11-23 22:57:37.345598"], ["current_sign_in_at", "2015-11-23 22:57:39.300957"], ["sign_in_count", 3], ["updated_at", "2015-11-23 22:57:39.306242"], ["id", 5]]
+  [1m[36m (26.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/wallets
+Completed 302 Found in 43ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/wallets" for ::1 at 2015-11-23 20:57:39 -0200
+Processing by WalletsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mWallet Load (0.7ms)[0m  [1mSELECT "wallets".* FROM "wallets" WHERE (user_id = 5)[0m
+  Rendered wallets/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 389ms (Views: 383.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 20:57:55 -0200
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 419ms (Views: 415.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/wallets" for ::1 at 2015-11-23 20:57:57 -0200
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mWallet Load (0.1ms)[0m  SELECT "wallets".* FROM "wallets" WHERE (user_id = 5)
+  Rendered wallets/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 285ms (Views: 283.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-11-23 20:58:25 -0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"km6LYVtBWPOYH67u+dIISLg4lW0FMWQD+tQUU1chD4MF9LoK7zHe0yF8uRMtTWZogIOTqDezmos349BZR3qofA=="}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 20:58:25 -0200
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-11-23 20:58:26 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 411ms (Views: 410.2ms | ActiveRecord: 0.0ms)
