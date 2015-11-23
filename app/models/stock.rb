@@ -3,10 +3,10 @@ class Stock < ActiveRecord::Base
 
   def gross_income
    
-	    initial = self[:initial_income] 
-	    current = self[:current_income] 
-	    
-	    return (current - initial) * self[:amount]  
+      initial = self[:initial_income] 
+      current = self[:current_income] 
+      
+      return (current - initial) * self[:amount]  
   end
 
   def brokerage
@@ -24,7 +24,7 @@ class Stock < ActiveRecord::Base
     end
   end
 
-  def emoluments
+  def  emoluments
      initial = self[:initial_income] * self[:amount]
      
      emoluments_tax = 0.000325

@@ -19,6 +19,7 @@
         <td><%= exchange.exchange_type %></td>
         <td><%= exchange.initial_income %></td>
         <td><%= exchange.created_at %></td>
+        <td><%= exchange.wallet.name %></td>
         <td><%= link_to 'Exibir', exchange %></td>
         <td><%= link_to 'Editar', edit_exchange_path(exchange) %></td>
         <td><%= link_to 'Apagar', exchange, method: :delete, data: { confirm: 'Tem certeza?' } %></td>

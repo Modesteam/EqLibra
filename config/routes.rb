@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
   resources :direct_treasuries
   resources :exchanges
-  resources :stocks
+  
+  resources :stocks do
+    member do
+      get :stocks_movimentation
+    end
+    
+    collection do
+      get :stocks_list
+    end
+  end
+  
   resources :investment_funds
   resources :wallets do
     resources :investment_funds

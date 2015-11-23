@@ -12,34 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, "Nome" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :initial_income %><br>
+    <%= f.label :initial_income, "Valor do Invest. Inicial" %><br>
     <%= f.number_field :initial_income, :step => 0.01 %>
   </div>
   <div class="field">
-    <%= f.label :current_income %><br>
+    <%= f.label :current_income, "Valor Atual" %><br>
     <%= f.number_field :current_income, :step => 0.01 %>
   </div>
   <div class="field">
-    <%= f.label :buy_date %><br>
+    <%= f.label :buy_date, "Data de Compra" %><br>
     <%= f.datetime_select :buy_date %>
   </div>
   <div class="field">
-    <%= f.label :buy_tax %><br>
+    <%= f.label :buy_tax, "Taxa de Compra" %><br>
     <%= f.number_field :buy_tax, :step => 0.01 %>
   </div>
   <div class="field">
-    <%= f.label :amount %><br>
+    <%= f.label :amount, "Quantidade" %><br>
     <%= f.number_field :amount %>
   </div>
   <div class="field">
-    <%= f.label :wallet_id %><br>
+    <%= f.label :wallet_id, "Carteira" %><br>
     <%= f.number_field :wallet_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Enviar" %>
   </div>
 <% end %>

@@ -1,40 +1,47 @@
+<div class="row" > 
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @stock.name %>
 </p>
 
 <p>
-  <strong>Initial income:</strong>
+  <strong>Receita Inicial:</strong>
   <%= @stock.initial_income %>
 </p>
 
 <p>
-  <strong>Current income:</strong>
+  <strong>Receita Atual</strong>
   <%= @stock.current_income %>
 </p>
 
 <p>
-  <strong>Buy date:</strong>
+  <strong>Data de Compra:</strong>
   <%= @stock.buy_date %>
 </p>
 
 <p>
-  <strong>Buy tax:</strong>
+  <strong>Taxa de Compra:</strong>
   <%= @stock.buy_tax %>
 </p>
 
 <p>
-  <strong>Amount:</strong>
+  <strong>Quantidade:</strong>
   <%= @stock.amount %>
 </p>
 
 <p>
-  <strong>Wallet:</strong>
-  <%= @stock.wallet.name %>
+  <strong>Carteira:</strong>
+  <%= @stock.wallet_id %>
 </p>
 
 
-<%= link_to 'Edit', edit_stock_path(@stock) %> |
-<%= link_to 'Back', wallets_path %>
+<%= link_to 'Editar', edit_stock_path(@stock), class: 'button info tiny' %> |
+<%= link_to 'Voltar', stocks_path, class: 'button info tiny' %>
+
+<br>
+<p>
+<strong>Veja a movimentação da sua Bolsa de Valores aqui! </strong>
+</p>
+<%= link_to 'Movimentação', stocks_movimentation_stock_path(@stock), class: 'button success small'   %>
