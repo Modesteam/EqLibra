@@ -1,35 +1,34 @@
 class InvestmentFund < ActiveRecord::Base
   belongs_to :wallet
 
-  def gross_profit
-    gross_income = self[:capital]*(years_of_investment*0.12)
+  def share_value
+    share_value = self[:capital]/self[:exitTax]
+    return format("%.2f", share_value).to_f
   end
 
-  def liquid_profit
-    liquid_income = gross_profit - (gross_profit*ir_tax(days_of_investment) + gross_profit*(years_of_investment*(self[:admTax]/100)))
+  def number_share
+    number_share = self[:shareValue]/share_value
+    return format("%.2f", number_share).to_f
   end
 
-  def years_of_investment
-    (Date.today.year-self[:buyDate].year).to_i
+  def total_fund_share
+    total_fund_share = self[:exitTax]+number_share
+    return format("%.2f", total_fund_share).to_f
   end
 
-  def days_of_investment
-    (Date.today.to_date-self[:buyDate]).to_i
+  def net_worth
+    net_worth = self[:capital]+self[:shareValue]
+    return format("%.2f", net_worth).to_f
+  end
+
+  def dimension_values
+    dimension_values = net_worth/total_fund_share
+    return format("%.2f", dimension_values).to_f
+  end
+
+  def yield_percentage
+    yield_percentage = dimension_values/share_value * self[:admTax]
+    return yield_percentage
   end
   
-  def ir_tax(days)
-    
-    raise InvalidNumberOfDays if days < 0
-    
-    if(0 <= days && days <= 180)
-    	0.25
-    elsif(181 <= days && days <= 361)
-    	0.20
-    elsif(362 <= days && days <= 720)
-    	0.175
-    elsif(days > 720)
-    	0.15
-  	end
-  end
-
 end

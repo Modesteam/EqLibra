@@ -1,38 +1,38 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Carteira:</strong>
+  <%= @direct_treasury.wallet.name %>
+</p>
+
+<p>
+  <strong>Nome do Tesouro Direto:</strong>
   <%= @direct_treasury.title %>
 </p>
 
 <p>
-  <strong>Buydate:</strong>
+  <strong>Data da Compra:</strong>
   <%= @direct_treasury.buyDate %>
 </p>
 
 <p>
-  <strong>Duedate:</strong>
+  <strong>Data da Venda:</strong>
   <%= @direct_treasury.dueDate %>
 </p>
 
 <p>
-  <strong>Investment value:</strong>
+  <strong>Valor de Investimento:</strong>
   <%= @direct_treasury.investment_value %>
 </p>
 
 <p>
-  <strong>Acquisitionstax:</strong>
+  <strong>Taxa de Aquisição:</strong>
   <%= @direct_treasury.acquisitionsTax %>%
 </p>
 
 <p>
-  <strong>Admtax:</strong>
+  <strong>Taxa Administrativa:</strong>
   <%= @direct_treasury.admTax %>%
-</p>
-
-<p>
-  <strong>Wallet:</strong>
-  <%= @direct_treasury.wallet.name %>
 </p>
 
 <p>
@@ -73,11 +73,6 @@
 <p>
   <strong>Rendimento Líquido:</strong>
   <%= @direct_treasury.liquid_income(@direct_treasury.buyDate, @direct_treasury.dueDate) %>%
-</p>
-
-<p>
-  <strong>Para efetuar a simulação de valor de retorno antecipado, click no link abaixo.</strong>
-  <%= link_to 'Simulador', simulate_direct_treasury_path(@direct_treasury) %>
 </p>
 
 
