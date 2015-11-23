@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Usuário:</strong>
   <%= @wallet.user.name %>
 </p>
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @wallet.name %>
 </p>
 
 <p>
-  <strong>Comments:</strong>
+  <strong>Descrição:</strong>
   <%= @wallet.comments %>
 </p>
 
 
-<%= link_to 'Edit', edit_wallet_path(@wallet) %> |
-<%= link_to 'Back', wallets_path %>
+<%= link_to 'Editar', edit_wallet_path(@wallet) %> |
+<%= link_to 'Voltar', wallets_path %>

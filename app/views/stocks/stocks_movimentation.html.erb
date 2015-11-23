@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <div class="row" > 
 
-<h1> <%= @stock_moviment.name%> Movimentação</h1>
+<h1> Movimentação <%= @stock_moviment.name%></h1>
 
 <p>
  <strong>Receita Bruta:</strong>
@@ -31,3 +31,5 @@
       </tr>     
   </tbody>
 </table>
+
+<%= link_to 'Voltar', stocks_path, class: 'button info tiny' %>
