@@ -12606,3 +12606,295 @@ Processing by WalletsController#index as HTML
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
   Rendered wallets/index.html.erb within layouts/application (9.6ms)
 Completed 200 OK in 324ms (Views: 313.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 16:30:08 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.1) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.1) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/fillipe/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (39.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.0ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (22.1ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (293.5ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.4ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (6.0ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (247.2ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (9.0ms)
+  Rendered /home/fillipe/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (571.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStocks (20151122004004)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (15.5ms)[0m  [1mCREATE TABLE "stocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "initial_income" float, "current_income" float, "buy_date" datetime, "buy_tax" float, "amount" float, "wallet_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX "index_stocks_on_wallet_id" ON "stocks" ("wallet_id")[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151122004004"]]
+  [1m[36m (39.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateExchanges (20151122021755)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (5.2ms)[0m  [1mCREATE TABLE "exchanges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "initial_income" float, "current_income" float, "efficiency" float, "initial_dollar_quotation" float, "initial_euro_quotation" float, "discount" float, "buy_date" datetime, "exchange_type" varchar, "dollar_quotation" float, "euro_quotation" float, "variation_dollar" varchar, "variation_euro" varchar, "wallet_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE  INDEX "index_exchanges_on_wallet_id" ON "exchanges" ("wallet_id")
+  [1m[36mSQL (6.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151122021755"]]
+  [1m[35m (32.3ms)[0m  commit transaction
+Migrating to CreateDirectTreasuries (20151122181430)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "direct_treasuries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "buyDate" date, "dueDate" date, "investment_value" float, "acquisitionsTax" float, "admTax" float, "wallet_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX "index_direct_treasuries_on_wallet_id" ON "direct_treasuries" ("wallet_id")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151122181430"]]
+  [1m[36m (30.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_direct_treasuries_on_wallet_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_direct_treasuries_on_wallet_id' AND type='index'
+[0m
+  [1m[35m (4.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exchanges_on_wallet_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exchanges_on_wallet_id' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_investment_funds_on_wallet_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_investment_funds_on_wallet_id' AND type='index'
+[0m
+  [1m[35m (5.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stocks_on_wallet_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stocks_on_wallet_id' AND type='index'
+
+  [1m[36m (0.6ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_wallets_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_wallets_on_user_id' AND type='index'
+[0m
+
+
+Started GET "/" for ::1 at 2015-11-23 16:31:04 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pages/home.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 10731ms (Views: 10138.6ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/direct_treasuries.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 16:31:16 -0200
+
+
+Started GET "/assets/scaffolds.self-0e6254322b341b231cb54cf0711fc8f232f240f0196b8c110d4a654853b53d0a.css?body=1" for ::1 at 2015-11-23 16:31:17 -0200
+
+
+Started GET "/assets/foundation_and_overrides.self-4649544effc78f0d6b3b60c3a551725a6eaac5812aabd71ed9ff3edd58bd6c6d.css?body=1" for ::1 at 2015-11-23 16:31:17 -0200
+
+
+Started GET "/assets/investment_funds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 16:31:17 -0200
+
+
+Started GET "/assets/stocks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 16:31:17 -0200
+
+
+Started GET "/assets/exchanges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 16:31:17 -0200
+
+
+Started GET "/assets/wallets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 16:31:17 -0200
+
+
+Started GET "/assets/application.self-e13fd2fb14fe684c8f6c1deb818e502ee017fe660fdb8958a40350db2d2eee31.css?body=1" for ::1 at 2015-11-23 16:31:17 -0200
+
+
+Started GET "/assets/foundation.self-4649544effc78f0d6b3b60c3a551725a6eaac5812aabd71ed9ff3edd58bd6c6d.css?body=1" for ::1 at 2015-11-23 16:31:17 -0200
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for ::1 at 2015-11-23 16:31:17 -0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-23 16:31:18 -0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-23 16:31:18 -0200
+
+
+Started GET "/assets/foundation/foundation.self-98616d4fb376f824aeb7c868e05e747b97176a864c7da854779ed398828df78f.js?body=1" for ::1 at 2015-11-23 16:31:18 -0200
+
+
+Started GET "/assets/foundation/foundation.abide.self-670a9b56e37b4b434f79686b8a9862222173d68ec823b20565340e0e87627ca4.js?body=1" for ::1 at 2015-11-23 16:31:18 -0200
+
+
+Started GET "/assets/foundation/foundation.accordion.self-02a179f7efde1facecf8a814cae32112c36800ce3d66bafc00c807a56d7b8d46.js?body=1" for ::1 at 2015-11-23 16:31:18 -0200
+
+
+Started GET "/assets/foundation/foundation.alert.self-631e4c4124bd543574c5a7f4d5d8b59fdf350f6c11d6201ba8a872e8a0f203b0.js?body=1" for ::1 at 2015-11-23 16:31:18 -0200
+
+
+Started GET "/assets/foundation/foundation.clearing.self-96397aa6b2d39ff61e9b4ce8486a9f716f9072f2011f1dc99f94a96b381b3830.js?body=1" for ::1 at 2015-11-23 16:31:18 -0200
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-3e70f72040b183d09b673307b08d1d688a5572c6c8cbb222755945e70ccbb05e.js?body=1" for ::1 at 2015-11-23 16:31:18 -0200
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-1889be5dfd0e56321a9a6d5fe9d4a94b04602c158f3e4d58419b967c255b999f.js?body=1" for ::1 at 2015-11-23 16:31:18 -0200
+
+
+Started GET "/assets/foundation/foundation.interchange.self-c6d033cdd9e7fd3f29c067eb7b9ee564f7a6b542650d2ca530ae1e3c529a3c35.js?body=1" for ::1 at 2015-11-23 16:31:18 -0200
+
+
+Started GET "/assets/foundation/foundation.joyride.self-1f6b19104e2439f1e4353444cb6fb9f7f308563556f167c2154ca3108eb7f77e.js?body=1" for ::1 at 2015-11-23 16:31:18 -0200
+
+
+Started GET "/assets/foundation/foundation.magellan.self-1fcf75780d5b4db5e97c267810e7c9a5e19a9f0d7b67a2d167074d7cff1d6a70.js?body=1" for ::1 at 2015-11-23 16:31:19 -0200
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-2f34a4b91e1e958aefbde46004d6186ee82e018fe95634214749799141339810.js?body=1" for ::1 at 2015-11-23 16:31:19 -0200
+
+
+Started GET "/assets/foundation/foundation.orbit.self-ba7d30fe424df83b5bc8bc5bb67ea90608759c6eb8212d1475d52b09db0bcd0f.js?body=1" for ::1 at 2015-11-23 16:31:19 -0200
+
+
+Started GET "/assets/foundation/foundation.reveal.self-5a83316675f14b52f582d67c053ae7977827a5b06459d7e8f5556cbedfba1d0d.js?body=1" for ::1 at 2015-11-23 16:31:19 -0200
+
+
+Started GET "/assets/foundation/foundation.slider.self-686e8b14e01aeb75ec0980de90956540d2b245324fc58e8c25debafc60300b96.js?body=1" for ::1 at 2015-11-23 16:31:19 -0200
+
+
+Started GET "/assets/foundation/foundation.tab.self-9b2bd1afa5715ce8f154fa008d0aab44500763e9b336a6d4e5bca96437176a74.js?body=1" for ::1 at 2015-11-23 16:31:19 -0200
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-dae1db2297f90064e1a8ae7b02b175ca613cc6a2d190aaed548f6ef853f4b46d.js?body=1" for ::1 at 2015-11-23 16:31:19 -0200
+
+
+Started GET "/assets/foundation/foundation.topbar.self-fa6260890f9f59c821128d066bcfaa18665c816022bafd398d937c367d5e39b7.js?body=1" for ::1 at 2015-11-23 16:31:19 -0200
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-11-23 16:31:19 -0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-23 16:31:20 -0200
+
+
+Started GET "/assets/direct_treasuries.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 16:31:20 -0200
+
+
+Started GET "/assets/exchanges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 16:31:20 -0200
+
+
+Started GET "/assets/investment_funds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 16:31:20 -0200
+
+
+Started GET "/assets/stocks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 16:31:20 -0200
+
+
+Started GET "/assets/wallets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 16:31:20 -0200
+
+
+Started GET "/assets/application.self-cd995c22997b497da7bf253c7674e1609474b36eb306833002aaa18fa8361c97.js?body=1" for ::1 at 2015-11-23 16:31:20 -0200
+
+
+Started GET "/analysis/index%20" for ::1 at 2015-11-23 16:31:31 -0200
+Processing by AnalysisController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered analysis/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 1094ms (Views: 1085.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questionnaire/index" for ::1 at 2015-11-23 16:31:40 -0200
+Processing by QuestionnaireController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered questionnaire/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 572ms (Views: 568.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-11-23 16:31:58 -0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TUh7KIPqEmxRThGkm3P/N+EM4DavRkmzOQY+B1c6aDLPlKwhIFU8LuCyQQJtKtO06EBIXtA5jKzvJxnQ21nDrw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 234ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 16:31:58 -0200
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 31ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-11-23 16:31:58 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (203.1ms)
+Completed 200 OK in 1818ms (Views: 1806.1ms | ActiveRecord: 0.0ms)

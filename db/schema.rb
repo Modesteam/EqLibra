@@ -85,7 +85,7 @@ ActiveRecord::Schema.define(version: 20151122181430) do
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
-    t.string   "name",                   default: "", null: false
+    t.string   "name"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -105,12 +105,8 @@ ActiveRecord::Schema.define(version: 20151122181430) do
     t.string   "name"
     t.string   "comments"
     t.integer  "user_id"
-    t.integer  "investment_fund_id"
-    t.integer  "stocks_id"
-    t.integer  "exchanges_id"
-    t.integer  "direct_treasuries_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "wallets", ["user_id"], name: "index_wallets_on_user_id"
