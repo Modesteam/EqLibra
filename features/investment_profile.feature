@@ -1,8 +1,11 @@
 Feature: Investment Profile
-
-Scenario: Should appear the correct investment profile analysis
-	    Given I am at the homepage
-	    When I choose the profile investment option
+	
+	Scenario: Should appears the correct investment profile analysis
+	    Given I am an user
+	    And I am signed in
+	    And I am at the homepage
+	    Then I should see "Seja bem Vindo!"
+	    When I choose the my profile option
 	    Then I should see "Questionário de Verificação de Perfil de Investidor"
 	    When I choose the answer questionnaire option
 	    Then I should see "Entre com as informações nos campos de texto abaixo"

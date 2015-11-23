@@ -2,12 +2,21 @@ Given(/^I am at the homepage$/) do
   visit root_path
 end
 
-When(/^I choose the profile investment option$/) do
-   click_link "Análise de Perfil de Investimento"
+Given(/^I am an user$/) do
+  @user = FactoryGirl.create(:user)
 end
+
+Given(/^I am signed in$/) do
+  login_as(@user, :scope => :user)
+end
+
 
 Then(/^I should see "(.+)"$/) do |text|
   expect(page).to have_content(text)
+end
+
+When(/^I choose the my profile option$/) do
+   click_link "Meu Perfil"
 end
 
 When(/^I choose the answer questionnaire option$/) do
