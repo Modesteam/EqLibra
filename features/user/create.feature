@@ -9,6 +9,6 @@ Feature: User Creation
     And I fill in "user_email" with "teste@teste.com"
     And I fill in "user_password" with "password"
     And I fill in "user_password_confirmation" with "password"
-    When I press the "Sign up" button
+    When I press the "Cadastrar" button
     Then I should see "Seja bem Vindo!"
     

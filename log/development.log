@@ -13711,3 +13711,57 @@ Processing by Devise::SessionsController#new as HTML
   Rendered devise/shared/_links.html.erb (1.0ms)
   Rendered devise/sessions/new.html.erb within layouts/application (11.9ms)
 Completed 200 OK in 411ms (Views: 410.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-11-23 21:12:15 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 468ms (Views: 439.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 21:13:55 -0200
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-11-23 21:13:55 -0200
+
+
+Started GET "/users/auth/facebook/callback?code=AQC8Tq9zmaTS9JF6d-DN2tELok-1jdyF4A2oGv0RfEtR9EpZ7AOgGoI8rpgGGbS_X87UYmSqC1QFDAsPsXqbzNmG5h6UoCqHKb_pbo9Ae4lbT_rF0jDK4z7PU25j0H1q-bK72P0OSwVehXWxyCBy0nAlBOXJhdKXD4MV2Mksn9Hh6JbPfdzTIAIT-SdJuiT-WvCE__xfip5gpMfLZ4XZPKujIDb1FINVWT6GPkrMP5mUZQJbt6iA8NnI3-Fg0iiAa4kVUmIkbOxaX3FjodeoYntb674O7IEHVUcpSnuv6n_UxczeF4dBqRvfHRy4u9CattU&state=f480c8139a6fd51ec3bbb20c1ac156ab7a32981d81c75dbf" for ::1 at 2015-11-23 21:13:56 -0200
+Processing by CallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQC8Tq9zmaTS9JF6d-DN2tELok-1jdyF4A2oGv0RfEtR9EpZ7AOgGoI8rpgGGbS_X87UYmSqC1QFDAsPsXqbzNmG5h6UoCqHKb_pbo9Ae4lbT_rF0jDK4z7PU25j0H1q-bK72P0OSwVehXWxyCBy0nAlBOXJhdKXD4MV2Mksn9Hh6JbPfdzTIAIT-SdJuiT-WvCE__xfip5gpMfLZ4XZPKujIDb1FINVWT6GPkrMP5mUZQJbt6iA8NnI3-Fg0iiAa4kVUmIkbOxaX3FjodeoYntb674O7IEHVUcpSnuv6n_UxczeF4dBqRvfHRy4u9CattU", "state"=>"f480c8139a6fd51ec3bbb20c1ac156ab7a32981d81c75dbf"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10153376660898221"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-11-23 22:57:39.300957"], ["current_sign_in_at", "2015-11-23 23:13:57.427196"], ["sign_in_count", 4], ["updated_at", "2015-11-23 23:13:57.428461"], ["id", 5]]
+  [1m[36m (18.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 43ms (ActiveRecord: 19.4ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 21:13:57 -0200
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 506ms (Views: 503.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-11-23 21:14:47 -0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"d63spP6cF9Lgxx/TaTpRoJULyEemZNzXnSo7bGtxccvjRK43S9elfFePhTrEojbIKjpuRg1wRI7FfkZSmF1u5A=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 21:14:47 -0200
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-11-23 21:14:47 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (7.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 414ms (Views: 412.7ms | ActiveRecord: 0.0ms)

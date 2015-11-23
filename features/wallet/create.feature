@@ -5,8 +5,8 @@ Feature: Wallet Creation
 
   Scenario: Should not create wallet without login
     Given I am on the wallets
-    Then I should not see "New Wallet"
-    And I should see "Sign up"
+    Then I should not see "Nova Carteira"
+    And I should see "Cadastrar"
 
   Scenario: wallet creation
     Given I am an user
@@ -15,7 +15,7 @@ Feature: Wallet Creation
     And I click on New Wallet link
     And I fill in "wallet_name" with "Minha Carteira"
     And I fill in "wallet_comments" with "Essa é a minha carteira de investimento incrível."
-    When I press the "Create Wallet" button
+    When I press the "Enviar" button
     Then I should see "Wallet was successfully created"
-    And I should see "Comments: Essa é a minha carteira de investimento incrível."
+    And I should see "Descrição: Essa é a minha carteira de investimento incrível."
     And I should see "Wallet was successfully created."

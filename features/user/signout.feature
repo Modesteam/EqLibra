@@ -5,4 +5,4 @@ Feature: Signout Test
 	    And I am signed in
 	    And I am at the homepage
 	    When I click on Logout link
-	    Then I should see "Log in"
+	    Then I should see "EqLibra"

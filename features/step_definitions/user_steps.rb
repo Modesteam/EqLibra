@@ -3,5 +3,5 @@ When(/^I click on Sign up link$/) do
 end
 
 When(/^I click on Logout link$/) do
-  click_link "Log out"
+  click_link "Sair"
 end

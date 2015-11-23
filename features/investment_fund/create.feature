@@ -8,7 +8,7 @@ Feature: Investment Fund Creation
     And I am signed in
     And I am at the homepage
     When I choose the wallets option
-    Then I should see "Listing Wallets"
+    Then I should see "Carteiras de Investimento"
     When I choose investment fund option
     Then I should see "Listing Investment Funds"
     When I choose the new investment fund option
