@@ -22,18 +22,60 @@
 
 <p>
   <strong>Acquisitionstax:</strong>
-  <%= @direct_treasury.acquisitionsTax %>
+  <%= @direct_treasury.acquisitionsTax %>%
 </p>
 
 <p>
   <strong>Admtax:</strong>
-  <%= @direct_treasury.admTax %>
+  <%= @direct_treasury.admTax %>%
 </p>
 
 <p>
   <strong>Wallet:</strong>
   <%= @direct_treasury.wallet.name %>
 </p>
+
+<p>
+  <strong>Total de Dias Corridos:</strong>
+  <%= @direct_treasury.calendar_days(@direct_treasury.buyDate, @direct_treasury.dueDate) %>
+</p>
+
+<p>
+  <strong>Total de Dias Úteis:</strong>
+  <%= @direct_treasury.business_days_between(@direct_treasury.buyDate, @direct_treasury.dueDate) %>
+</p>
+
+<p>
+  <strong>Valor Bruto de Resgate:</strong>
+  <%= @direct_treasury.gross_value(@direct_treasury.buyDate, @direct_treasury.dueDate) %>
+</p>
+
+<p>
+  <strong>Rendimento Bruto:</strong>
+  <%= @direct_treasury.gross_income(@direct_treasury.buyDate, @direct_treasury.dueDate) %>%
+</p>
+
+<p>
+  <strong>Taxa do Imposto de Renda:</strong>
+  <%= @direct_treasury.ir_tax(@direct_treasury.calendar_days(@direct_treasury.buyDate, @direct_treasury.dueDate)) * 100 %>%
+</p>
+
+<p>
+  <strong>Imposto de Renda:</strong>
+  <%= @direct_treasury.value_ir(@direct_treasury.buyDate, @direct_treasury.dueDate) %>
+</p>
+
+<p>
+  <strong>Valor Líquido de Resgate:</strong>
+  <%= @direct_treasury.liquid_value(@direct_treasury.buyDate, @direct_treasury.dueDate) %>
+</p>
+
+<p>
+  <strong>Rendimento Líquido:</strong>
+  <%= @direct_treasury.liquid_income(@direct_treasury.buyDate, @direct_treasury.dueDate) %>%
+</p>
+
+
 
 <%= link_to 'Edit', edit_direct_treasury_path(@direct_treasury) %> |
 <%= link_to 'Back', wallets_path %>
