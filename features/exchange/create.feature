@@ -1,9 +1,9 @@
-Feature: Stock Creation
-  In order to register my stock
+Feature: Exchange Creation
+  In order to register my exchange
   As an user
-  I should be able to create a stock
+  I should be able to create a exchange
 
-  Scenario: Investment fund creation
+  Scenario: Exchange creation
     Given I am an user
     And I am signed in
     And I am at the homepage
@@ -16,11 +16,11 @@ Feature: Stock Creation
     When I am at the homepage
     When I choose the wallets option
     Then I should see "Carteiras de Investimento"
-    When I choose stock option
-    Then I should see "Bolsa de Valores"
-    When I choose new stock option
-    And I fill in "stock_name" with "Stock 1"
-    And I select datetime "2015 June 29 - 20:00" as the "stock_buy_date"
+    When I choose exchange option
+    Then I should see "Câmbios"
+    When I choose new exchange option
+    And I fill in "Nome" with "Teste"
+    And I fill in "Valor de compra da moeda:" with "45"
     And I fill in "Carteira" with "1"
     When I press the "Enviar" button
-    Then I should see "Stock was successfully created."
+    Then I should see "Exchange was successfully updated."

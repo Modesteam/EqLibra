@@ -1,74 +1,38 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @exchange.name %>
-</p>
-
-<p>
-  <strong>Initial income:</strong>
-  <%= @exchange.initial_income %>
-</p>
-
-<p>
-  <strong>Current income:</strong>
-  <%= @exchange.current_income %>
-</p>
-
-<p>
-  <strong>Efficiency:</strong>
-  <%= @exchange.efficiency %>
-</p>
-
-<p>
-  <strong>Initial dollar quotation:</strong>
-  <%= @exchange.initial_dollar_quotation %>
-</p>
-
-<p>
-  <strong>Initial euro quotation:</strong>
-  <%= @exchange.initial_euro_quotation %>
-</p>
-
-<p>
-  <strong>Discount:</strong>
-  <%= @exchange.discount %>
-</p>
-
-<p>
-  <strong>Buy date:</strong>
-  <%= @exchange.buy_date %>
-</p>
-
-<p>
-  <strong>Exchange type:</strong>
+  <strong>Tipo de Câmbio:</strong>
   <%= @exchange.exchange_type %>
 </p>
 
 <p>
-  <strong>Dollar quotation:</strong>
-  <%= @exchange.dollar_quotation %>
+  <strong>Valor do Invest. Inicial:</strong>
+  <%= @exchange.initial_income %>
 </p>
 
 <p>
-  <strong>Euro quotation:</strong>
-  <%= @exchange.euro_quotation %>
+  <strong>Data de Compra:</strong>
+  <%= @exchange.created_at %>
 </p>
 
 <p>
-  <strong>Variation dollar:</strong>
-  <%= @exchange.variation_dollar %>
+  <strong>Valor bruto inical em Reais:</strong>
+  <%= convert %>
 </p>
 
 <p>
-  <strong>Variation euro:</strong>
-  <%= @exchange.variation_euro %>
+  <strong>Desconto:</strong>
+  <%= discount %>
 </p>
+
 
 <p>
-  <strong>Wallet:</strong>
-  <%= @exchange.wallet.name %>
+  <strong>Valor líquido atual em Reais:</strong>
+  <%= convert_current_income %>
 </p>
 
-<%= link_to 'Edit', edit_exchange_path(@exchange) %> |
-<%= link_to 'Back', wallets_path %>
+
+
+
+<%= link_to 'Editar', edit_exchange_path(@exchange),  class: 'button info tiny' %> |
+<%= link_to 'Voltar', exchanges_path,  class: 'button info tiny' %>

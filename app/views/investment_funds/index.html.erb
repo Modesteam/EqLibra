@@ -1,21 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Investment Funds</h1>
+<h1>Fundo de Investimento</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Buydate</th>
-      <th>Admtax</th>
-      <th>Aditionalinfo</th>
-      <th>Exittax</th>
-      <th>Fundbegin</th>
-      <th>Manager</th>
-      <th>Managercontact</th>
-      <th>Sharevalue</th>
-      <th>Capital</th>
-      <th>Wallet</th>
+      <th>Carteira</th>
+      <th>Nome</th>
+      <th>Data de Inv.</th>
+      <th>Taxa Administ.</th>
+      <th>Patrimônio Inic.</th>
+      <th>Investimento</th>
+      <th>Cotas Inic.</th>
+      <th>Gerente</th>
+      <th>Contato</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,20 +21,18 @@
   <tbody>
     <% @investment_funds.each do |investment_fund| %>
       <tr>
+        <td><%= investment_fund.wallet.name %></td>
         <td><%= investment_fund.name %></td>
         <td><%= investment_fund.buyDate %></td>
         <td><%= investment_fund.admTax %></td>
-        <td><%= investment_fund.aditionalInfo %></td>
+        <td><%= investment_fund.capital %></td>
+        <td><%= investment_fund.shareValue %></td>
         <td><%= investment_fund.exitTax %></td>
-        <td><%= investment_fund.fundBegin %></td>
         <td><%= investment_fund.manager %></td>
         <td><%= investment_fund.managerContact %></td>
-        <td><%= investment_fund.shareValue %></td>
-        <td><%= investment_fund.capital %></td>
-        <td><%= investment_fund.wallet.name %></td>
-        <td><%= link_to 'Show', investment_fund %></td>
-        <td><%= link_to 'Edit', edit_investment_fund_path(investment_fund) %></td>
-        <td><%= link_to 'Destroy', investment_fund, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', investment_fund %></td>
+        <td><%= link_to 'Editar', edit_investment_fund_path(investment_fund) %></td>
+        <td><%= link_to 'Apagar', investment_fund, method: :delete, data: { confirm: 'Tem Certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -44,6 +40,6 @@
 
 <br>
 
-<%= link_to 'New Investment fund', new_investment_fund_path %>
+<%= link_to 'Novo Fundo de Investimento', new_investment_fund_path %>
 <br>
-<%= link_to 'Back', wallets_path %>
+<%= link_to 'Voltar', wallets_path %>

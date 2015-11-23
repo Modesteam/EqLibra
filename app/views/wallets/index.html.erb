@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Wallets</h1>
+<h1>Carteiras de Investimento</h1>
 
 <table>
   <thead>
@@ -26,10 +26,10 @@
         <td><%= link_to 'Bolsa de Valores', stocks_path(:wallet_id => "#{wallet.id}") %></td>
         <td><%= link_to 'Câmbios', exchanges_path(:wallet_id => "#{wallet.id}") %></td>
         <td><%= link_to 'Tesouro Direto', direct_treasuries_path(:wallet_id => "#{wallet.id}") %></td>
-        <td><%= link_to 'Show', wallet %></td>
-        <td><%= link_to 'Edit', edit_wallet_path(wallet) %></td>
-        <td><%= link_to 'Destroy', wallet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+        <td><%= link_to 'Exibir', wallet %></td>
+        <td><%= link_to 'Editar', edit_wallet_path(wallet) %></td>
+        <td><%= link_to 'Apagar', wallet, method: :delete, data: { confirm: 'Tem Certeza?' } %></td>
+      </tr>
     <% end %>
 
    </tbody>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Wallet', new_wallet_path %>
+<%= link_to 'Nova Carteira', new_wallet_path %>

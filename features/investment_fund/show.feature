@@ -1,9 +1,9 @@
-Feature: Investment Fund Creation
-  In order to register my investment fund
+Feature: Investment Fund Exibition
+  In order to show my investment fund
   As an user
-  I should be able to create an investment fund
+  I should be able to see an investment fund
 
-  Scenario: Investment fund creation
+  Scenario: Investment fund exibition
     Given I am an user
     And I am signed in
     And I am at the homepage
@@ -29,3 +29,10 @@ Feature: Investment Fund Creation
     When I fill in "Carteira" with "1"
     When I press the "Enviar" button
     Then I should see "Investment fund was successfully created."
+    When I am at the homepage
+    When I choose the wallets option
+    Then I should see "Carteiras de Investimento"
+    When I choose investment fund option
+    Then I should see "Fundo de Investimento"
+    When I choose show option
+    Then I should see "Percentual de Rentabilidade: 5%"

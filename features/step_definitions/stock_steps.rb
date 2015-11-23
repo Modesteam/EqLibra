@@ -3,7 +3,11 @@ When(/^I choose stock option$/) do
 end
 
 When(/^I choose new stock option$/) do
-   click_link "New Stock"
+   click_link "Nova Bolsa"
+end
+
+When(/^I choose movimentation option$/) do
+   click_link "Movimentação"
 end
 
 And /^(?:|I )select datetime "([^ ]*) ([^ ]*) ([^ ]*) - ([^:]*):([^"]*)" as the "([^"]*)"$/ do |year, month, day, hour, minute, field|

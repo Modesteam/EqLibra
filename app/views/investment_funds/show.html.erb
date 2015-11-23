@@ -1,70 +1,81 @@
+ 
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Carteira:</strong>
+  <%= @investment_fund.wallet.name %>
+</p>
+
+<p>
+  <strong>Nome do Fundo de Investimento:</strong>
   <%= @investment_fund.name %>
 </p>
 
 <p>
-  <strong>Buydate:</strong>
+  <strong>Data da Compra:</strong>
   <%= @investment_fund.buyDate %>
 </p>
 
 <p>
-  <strong>Admtax:</strong>
+  <strong>Taxa Administrativa:</strong>
   <%= @investment_fund.admTax %>
 </p>
 
 <p>
-  <strong>Aditionalinfo:</strong>
-  <%= @investment_fund.aditionalInfo %>
-</p>
-
-<p>
-  <strong>Exittax:</strong>
-  <%= @investment_fund.exitTax %>
-</p>
-
-<p>
-  <strong>Fundbegin:</strong>
-  <%= @investment_fund.fundBegin %>
-</p>
-
-<p>
-  <strong>Manager:</strong>
-  <%= @investment_fund.manager %>
-</p>
-
-<p>
-  <strong>Managercontact:</strong>
-  <%= @investment_fund.managerContact %>
-</p>
-
-<p>
-  <strong>Sharevalue:</strong>
-  <%= @investment_fund.shareValue %>
-</p>
-
-<p>
-  <strong>Capital:</strong>
+  <strong>Patrimônio Inicial:</strong>
   <%= @investment_fund.capital %>
 </p>
 
 <p>
-  <strong>Closing price:</strong>
-  <%= @investment_fund.closing_price %>
+  <strong>Investimento:</strong>
+  <%= @investment_fund.shareValue %>
 </p>
 
 <p>
-  <strong>Closing date:</strong>
-  <%= @investment_fund.closing_date %>
+  <strong>Cotas Iniciais:</strong>
+  <%= @investment_fund.exitTax.to_i %>
 </p>
 
 <p>
-  <strong>Wallet:</strong>
-  <%= @investment_fund.wallet.name %>
+  <strong>Gerente do Investimento:</strong>
+  <%= @investment_fund.manager %>
 </p>
 
-<%= link_to 'Edit', edit_investment_fund_path(@investment_fund) %> |
-<%= link_to 'Back', wallets_path %>
+<p>
+  <strong>Contato do Gerente:</strong>
+  <%= @investment_fund.managerContact %>
+</p>
 
+<p>
+  <strong>Valor da cota na data da aplicação:</strong>
+  <%= @investment_fund.share_value %>
+</p>
+
+<p>
+  <strong>Número de cotas adquiridas pelo investidor:</strong>
+  <%= @investment_fund.number_share.to_i %>
+</p>
+
+<p>
+  <strong>Total de cotas do fundo após a aplicação:</strong>
+  <%= @investment_fund.total_fund_share.to_i %>
+</p>
+
+<p>
+  <strong>Patrimônio Líquido após a aplicação:</strong>
+  <%= @investment_fund.net_worth %>
+</p>
+
+<p>
+  <strong>Valor da cota após a aplicação:</strong>
+  <%= @investment_fund.dimension_values %>
+</p>
+
+<p>
+  <strong>Percentual de Rentabilidade:</strong>
+  <%= @investment_fund.yield_percentage.to_i %>%
+</p>
+
+
+<%= link_to 'Editar', edit_investment_fund_path(@investment_fund),  class: 'button info tiny' %> |
+<%= link_to 'Voltar', wallets_path,  class: 'button info tiny' %>

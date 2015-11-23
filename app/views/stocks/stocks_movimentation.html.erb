@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<div class="row" > 
+
+<h1> Movimentação <%= @stock_moviment.name%></h1>
+
+<p>
+ <strong>Receita Bruta:</strong>
+ <%= @stock_moviment.gross_income.round(2) %>  R$ 
+</p>
+
+<p>
+  <strong>Receita Líquida:</strong>
+ <%= @stock_moviment.liquid_income.round(2) %> R$
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Corretagem</th>
+      <th>Lucro</th>
+      <th>Custódia</th>
+      <th>Imposto de Renda</th>
+    </tr>
+  </thead>  
+  <tbody>
+      <tr>
+        <td><%= @stock_moviment.brokerage.round(2)  %> R$</td>
+        <td><%= @stock_moviment.emoluments.round(2) %> R$</td>
+        <td><%= @stock_moviment.custody.round(2)  %> R$</td>
+        <td><%= @stock_moviment.income_tax.round(2) %> R$</td>
+      </tr>     
+  </tbody>
+</table>
+
+<%= link_to 'Voltar', stocks_path, class: 'button info tiny' %>
