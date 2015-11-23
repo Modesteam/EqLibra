@@ -1,4 +1,7 @@
 Feature: Investment Profile
+	In order to check my investment profile
+    As an user
+  	I should be able to verify my investment profile
 	
 	Scenario: Should appears the correct investment profile analysis
 	    Given I am an user

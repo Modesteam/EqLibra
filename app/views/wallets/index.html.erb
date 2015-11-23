@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Comments</th>
+      <th>Nome</th>
+      <th>Descrição</th>
       <th>Fundos de Inv.</th>
       <th>Bolsa de Val.</th>
       <th>Câmbios</th>
@@ -16,24 +16,24 @@
   </thead>
 
   <tbody>
-    
-    <% @wallets.each do |wallet| %>
-      <tr>
-        <td><%= wallet.name %></td>
-        <td><%= wallet.comments %></td>
 
-        <td><%= link_to 'Fundos de Inv.', investment_funds_path(:wallet_id => "#{wallet.id}") %></td>
-        <td><%= link_to 'Bolsa de Val.', stocks_path(:wallet_id => "#{wallet.id}") %></td>
+    <% @wallets.each do |wallet| %>
+    <tr>
+        <td><%= wallet.name %>
+        <td><%= wallet.comments %></br>
+
+        <td><%= link_to 'Fundos de Investimento', investment_funds_path(:wallet_id => "#{wallet.id}") %></td>
+        <td><%= link_to 'Bolsa de Valores', stocks_path(:wallet_id => "#{wallet.id}") %></td>
         <td><%= link_to 'Câmbios', exchanges_path(:wallet_id => "#{wallet.id}") %></td>
         <td><%= link_to 'Tesouro Direto', direct_treasuries_path(:wallet_id => "#{wallet.id}") %></td>
         <td><%= link_to 'Show', wallet %></td>
         <td><%= link_to 'Edit', edit_wallet_path(wallet) %></td>
         <td><%= link_to 'Destroy', wallet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    </tr>
     <% end %>
-  </tbody>
 
-  
+   </tbody>
+
 </table>
 
 <br>

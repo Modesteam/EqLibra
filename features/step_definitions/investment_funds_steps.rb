@@ -1,9 +1,9 @@
 When(/^I choose investment fund option$/) do
-   click('Fundos de Inv.')
+   click_link "Fundos de Investimento"
 end
 
 When(/^I choose the new investment fund option$/) do
-   click_link "New Investment Fund"
+   click_link "New Investment fund"
 end
 
 When(/^I choose the wallets option$/) do
