@@ -1,37 +1,37 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Título:</strong>
   <%= @direct_treasury.title %>
 </p>
 
 <p>
-  <strong>Buydate:</strong>
+  <strong>Data de Compra:</strong>
   <%= @direct_treasury.buyDate %>
 </p>
 
 <p>
-  <strong>Duedate:</strong>
+  <strong>Data de Vencimento:</strong>
   <%= @direct_treasury.dueDate %>
 </p>
 
 <p>
-  <strong>Investment value:</strong>
+  <strong>Valor do Investimento:</strong>
   <%= @direct_treasury.investment_value %>
 </p>
 
 <p>
-  <strong>Acquisitionstax:</strong>
+  <strong>Taxa de Aquisição:</strong>
   <%= @direct_treasury.acquisitionsTax %>%
 </p>
 
 <p>
-  <strong>Admtax:</strong>
+  <strong>Taxa Administrativa:</strong>
   <%= @direct_treasury.admTax %>%
 </p>
 
 <p>
-  <strong>Wallet:</strong>
+  <strong>Carteira:</strong>
   <%= @direct_treasury.wallet.name %>
 </p>
 
@@ -81,5 +81,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_direct_treasury_path(@direct_treasury) %> |
-<%= link_to 'Back', wallets_path %>
+<%= link_to 'Editar', edit_direct_treasury_path(@direct_treasury) %> |
+<%= link_to 'Voltar', wallets_path %>

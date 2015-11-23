@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Direct Treasuries</h1>
+<h1>Tesouro Direto</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Buydate</th>
-      <th>Duedate</th>
-      <th>Investment value</th>
-      <th>Acquisitionstax</th>
-      <th>Admtax</th>
-      <th>Wallet</th>
+      <th>Título</th>
+      <th>Data de Compra</th>
+      <th>Data de Vencimento</th>
+      <th>Valor do Investimento</th>
+      <th>Taxa de Aquisição</th>
+      <th>Taxa Administrativa</th>
+      <th>Carteira</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,9 +26,9 @@
         <td><%= direct_treasury.acquisitionsTax %></td>
         <td><%= direct_treasury.admTax %></td>
         <td><%= direct_treasury.wallet.name %></td>
-        <td><%= link_to 'Show', direct_treasury %></td>
-        <td><%= link_to 'Edit', edit_direct_treasury_path(direct_treasury) %></td>
-        <td><%= link_to 'Destroy', direct_treasury, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', direct_treasury %></td>
+        <td><%= link_to 'Editar', edit_direct_treasury_path(direct_treasury) %></td>
+        <td><%= link_to 'Apagar', direct_treasury, method: :delete, data: { confirm: 'Tem Certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,6 +36,6 @@
 
 <br>
 
-<%= link_to 'New Direct treasury', new_direct_treasury_path %>
+<%= link_to 'Novo Tesouro Direto', new_direct_treasury_path %>
 <br>
-<%= link_to 'Back', wallets_path %>
+<%= link_to 'Voltar', wallets_path %>
