@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <strong>Data da Compra:</strong>
+  <strong>Data de Compra:</strong>
   <%= @direct_treasury.buyDate %>
 </p>
 
@@ -21,7 +21,7 @@
 </p>
 
 <p>
-  <strong>Valor de Investimento:</strong>
+  <strong>Valor do Investimento:</strong>
   <%= @direct_treasury.investment_value %>
 </p>
 
@@ -76,5 +76,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_direct_treasury_path(@direct_treasury) %> |
-<%= link_to 'Back', wallets_path %>
+<%= link_to 'Editar', edit_direct_treasury_path(@direct_treasury),  class: 'button info tiny'  %> |
+<%= link_to 'Voltar', wallets_path,  class: 'button info tiny'  %>

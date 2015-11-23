@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Direct Treasuries</h1>
+<h1>Tesouro Direto</h1>
 
 <table>
   <thead>
@@ -26,9 +26,9 @@
         <td><%= direct_treasury.investment_value %></td>
         <td><%= direct_treasury.acquisitionsTax %></td>
         <td><%= direct_treasury.admTax %></td>
-        <td><%= link_to 'Show', direct_treasury %></td>
-        <td><%= link_to 'Edit', edit_direct_treasury_path(direct_treasury) %></td>
-        <td><%= link_to 'Destroy', direct_treasury, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', direct_treasury %></td>
+        <td><%= link_to 'Editar', edit_direct_treasury_path(direct_treasury) %></td>
+        <td><%= link_to 'Apagar', direct_treasury, method: :delete, data: { confirm: 'Tem Certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,6 +36,6 @@
 
 <br>
 
-<%= link_to 'New Direct treasury', new_direct_treasury_path %>
+<%= link_to 'Novo Tesouro Direto', new_direct_treasury_path %>
 <br>
-<%= link_to 'Back', wallets_path %>
+<%= link_to 'Voltar', wallets_path %>

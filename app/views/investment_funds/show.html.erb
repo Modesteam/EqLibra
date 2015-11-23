@@ -1,3 +1,4 @@
+ 
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -11,7 +12,7 @@
 </p>
 
 <p>
-  <strong>Data de Investimento:</strong>
+  <strong>Data da Compra:</strong>
   <%= @investment_fund.buyDate %>
 </p>
 
@@ -76,9 +77,5 @@
 </p>
 
 
-
-
-
-<%= link_to 'Edit', edit_investment_fund_path(@investment_fund) %> |
-<%= link_to 'Back', wallets_path %>
-
+<%= link_to 'Editar', edit_investment_fund_path(@investment_fund),  class: 'button info tiny' %> |
+<%= link_to 'Voltar', wallets_path,  class: 'button info tiny' %>

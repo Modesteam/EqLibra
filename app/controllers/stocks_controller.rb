@@ -1,17 +1,24 @@
 class StocksController < ApplicationController
   before_action :set_stock, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
 
   # GET /stocks
   # GET /stocks.json
   def index
-    @wallet_id = params[:wallet_id]
-    @stocks = Stock.where("wallet_id = ?", @wallet_id)
+    @stocks = Stock.all
   end
 
   # GET /stocks/1
   # GET /stocks/1.json
   def show
+    @stock = Stock.find(params[:id])
+  end
+
+  def stocks_list
+    @stocks = Stock.all
+  end
+
+  def stocks_movimentation
+    @stock_moviment = Stock.find(params[:id])
   end
 
   # GET /stocks/new
@@ -58,7 +65,7 @@ class StocksController < ApplicationController
   def destroy
     @stock.destroy
     respond_to do |format|
-      format.html { redirect_to wallets_path, notice: 'Stock was successfully destroyed.' }
+      format.html { redirect_to stocks_url, notice: 'Stock was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -71,6 +78,6 @@ class StocksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def stock_params
-      params.require(:stock).permit(:name, :initial_income, :current_income, :buy_date, :buy_tax, :amount, :wallet_id)
+      params.require(:stock).permit(:name, :initial_income, :current_income, :buy_date, :buy_tax, :amount, :wallet_id, :closing_price, :closing_date)
     end
 end

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Investment Funds</h1>
+<h1>Fundo de Investimento</h1>
 
 <table>
   <thead>
@@ -30,9 +30,9 @@
         <td><%= investment_fund.exitTax %></td>
         <td><%= investment_fund.manager %></td>
         <td><%= investment_fund.managerContact %></td>
-        <td><%= link_to 'Show', investment_fund %></td>
-        <td><%= link_to 'Edit', edit_investment_fund_path(investment_fund) %></td>
-        <td><%= link_to 'Destroy', investment_fund, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', investment_fund %></td>
+        <td><%= link_to 'Editar', edit_investment_fund_path(investment_fund) %></td>
+        <td><%= link_to 'Apagar', investment_fund, method: :delete, data: { confirm: 'Tem Certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,6 +40,6 @@
 
 <br>
 
-<%= link_to 'New Investment fund', new_investment_fund_path %>
+<%= link_to 'Novo Fundo de Investmento', new_investment_fund_path %>
 <br>
-<%= link_to 'Back', wallets_path %>
+<%= link_to 'Voltar', wallets_path %>
