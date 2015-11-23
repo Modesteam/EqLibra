@@ -1,5 +1,5 @@
 class DirectTreasuriesController < ApplicationController
-  before_action :set_direct_treasury, only: [:show, :edit, :update, :destroy]
+  before_action :set_direct_treasury, only: [:show, :edit, :update, :destroy, :simulate]
   before_action :authenticate_user!
   
   # GET /direct_treasuries
@@ -21,6 +21,18 @@ class DirectTreasuriesController < ApplicationController
 
   # GET /direct_treasuries/1/edit
   def edit
+  end 
+
+  def simulate
+  end
+
+  def simulate_form
+    #@direct_treasury.dueDateSimulate =
+    #@direct_treasury.acquisitionsTaxSimulate =
+
+  end
+
+  def simulate_view
   end
 
   # POST /direct_treasuries

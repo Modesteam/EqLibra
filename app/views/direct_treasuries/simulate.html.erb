@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @direct_treasury.title %>
+</p>
+
+<p>
+  <strong>Buydate:</strong>
+  <%= @direct_treasury.buyDate %>
+</p>
+
+<p>
+  <strong>Duedate:</strong>
+  <%= @direct_treasury.dueDate %>
+</p>
+
+<p>
+  <strong>Investment value:</strong>
+  <%= @direct_treasury.investment_value %>
+</p>
+
+<p>
+  <strong>Acquisitionstax:</strong>
+  <%= @direct_treasury.acquisitionsTax %>%
+</p>
+
+<p>
+  <strong>Wallet:</strong>
+  <%= @direct_treasury.wallet.name %>
+</p>
+
+<%= form_for(@direct_treasury) do |f| actions="simulate_form"%>
+  <% if @direct_treasury.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@direct_treasury.errors.count, "error") %> prohibited this direct_treasury from being saved:</h2>
+
+      <ul>
+      <% @direct_treasury.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dueDateSimulate %><br>
+    <%= f.date_select :dueDate %>
+  <div class="field">
+    <%= f.label :acquisitionsTaxSimulate %><br>
+    <%= f.number_field :acquisitionsTax, :step => 0.01 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

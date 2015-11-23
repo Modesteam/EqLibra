@@ -75,6 +75,10 @@
   <%= @direct_treasury.liquid_income(@direct_treasury.buyDate, @direct_treasury.dueDate) %>%
 </p>
 
+<p>
+  <strong>Para efetuar a simulação de valor de retorno antecipado, click no link abaixo.</strong>
+  <%= link_to 'Simulador', simulate_direct_treasury_path(@direct_treasury) %>
+</p>
 
 
 <%= link_to 'Edit', edit_direct_treasury_path(@direct_treasury) %> |
