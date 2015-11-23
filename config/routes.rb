@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get '/home', to: 'pages#home', as: :home
+
+  get "/analysis/index " => "analysis#index", :as => 'analysis_index'
+  get "/questionnaire/index" => "questionnaire#index", :as => 'questionnaire_index'
+  post "/questionnaire/questionnaire_result" => "questionnaire#questionnaire_result", :as => 'questionnaire_result'
+  get "/questionnaire/user_investment_profile" => "questionnaire#user_investment_profile", :as => 'investment_profile_result'	
   
  
 
