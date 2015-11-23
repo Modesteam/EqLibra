@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Devise Gem
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 # Foundation Gem
 gem 'foundation-rails'
 

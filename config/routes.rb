@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :wallets do
     resources :investment_funds
   end 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   root to: 'pages#home'
   get '/home', to: 'pages#home', as: :home
 
