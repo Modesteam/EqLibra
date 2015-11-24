@@ -1,4 +1,5 @@
-{<img alt='Stories in Ready' src='https://badge.waffle.io/fabraz/assetcheef.png?label=ready&title=Ready' />}[https://waffle.io/Modesteam/EqLibra]
+{<img src="https://codeclimate.com/repos/5653a872ec04ff0053001302/badges/55b228961243c9d0925f/gpa.svg" />}[https://codeclimate.com/repos/5653a872ec04ff0053001302/feed]
+
 == README - EqLibra Plus
 
 EqLibra Plus is an investment portifolio management web app
